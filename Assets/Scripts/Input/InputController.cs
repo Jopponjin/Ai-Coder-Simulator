@@ -120,12 +120,18 @@ namespace BH
                             //Debug.Log("[INTERACTION]: Interaction with: " + m_hit.transform.name);
                             clickedInteractedObject = m_hit.transform.gameObject;
                         }
+                        if (m_hit.transform.gameObject.CompareTag("Wire"))
+                        {
+                            Debug.Log("[INTERACTION]: Interaction with: " + m_hit.transform.name);
+                            clickedInteractedObject = m_hit.transform.gameObject;
+                        }
                     }
                     else
                     {
                         Debug.Log("[INTERACTION]: Raycast return null!");
                     }
                 }
+
             }
 
             RaycastHit m_hit2;
@@ -208,9 +214,15 @@ namespace BH
                     {
                         pinAndWireHandler.DeleteNodeWires(clickedInteractedObject.GetComponent<Node>());
                         nodeInteraction.DeleteNode(clickedInteractedObject);
+                        clickedInteractedObject = null;
 
                         //Debug.Log("[INTERACTION]: Deleted node wires");
                     }
+                    //if (clickedInteractedObject.tag == "Wire")
+                    //{
+                    //    pinAndWireHandler.DeleteWireAndConnections(clickedInteractedObject.GetComponent<Wire>());
+                    //    clickedInteractedObject = null;
+                    //}
                 }
             }
         }

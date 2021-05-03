@@ -24,11 +24,6 @@ namespace BH
             Destroy(m_node);
             Debug.Log("[NODEINTERACTION]: Node "+ m_node.gameObject.name +" deleted!");
         }
-
-        void CancelPlacment()
-        {
-
-        }
     }
 }
 

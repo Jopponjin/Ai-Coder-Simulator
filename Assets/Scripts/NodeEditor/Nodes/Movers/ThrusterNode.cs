@@ -3,82 +3,130 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using BH.Data;
+using System;
 
 namespace BH
 {
     public class ThrusterNode : BaseNode
     {
-        [HideInInspector]
-        public AiCoreData coreData;
+        [SerializeField] ShipData shipData;
+        [Space]
 
-        public Toggle revert;
-        public Toggle inputX;
-        public Toggle inputY;
-        public Toggle inputZ;
+
+        [SerializeField] InputField forceInputField;
+
+        [SerializeField] Toggle toggelRevert;
+
+        [SerializeField] Toggle toggelX;
+
+        [SerializeField] Toggle toggelY;
+
+        [SerializeField] Toggle toggelZ;
+
+
+        [Space]
+        [SerializeField] bool revert;
+
+        [SerializeField] bool inputX;
+
+        [SerializeField] bool inputY;
+
+        [SerializeField] bool inputZ;
 
         [Space]
         [SerializeField]
-        float force;
+        int force = 10;
         int outputSignal;
 
+        Rigidbody shipRb;
 
-        public override void ProcessOutput()
+        private void Awake()
+        {
+            shipRb = shipData.ShipGameObject.GetComponent<Rigidbody>();
+        }
+
+        public override void ProcessOutput(GameObject m_shipRefrance)
         {
             int outputSignal = inputPins[0].State;
 
-            if (outputSignal >= 1)
+            if (outputSignal >= 1 & shipRb != null)
             {
-                Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                
-                if (revert)
-                {
-                    if (inputX && !inputY && !inputZ)
-                    {
-                        coreData.aiAgentObject.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 0, 0) * force);
-                        outputPins[0].ReceivePinSignal(1, null);
-                        Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                        outputSignal = 0;
-                    }
-                    if (!inputX && inputY && !inputZ)
-                    {
-                        coreData.aiAgentObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, -1, 0) * force);
-                        outputPins[0].ReceivePinSignal(1, null);
-                        Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                        outputSignal = 0;
-                    }
-                    if (inputX && !inputY && inputZ)
-                    {
-                        coreData.aiAgentObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, -1) * force);
-                        outputPins[0].ReceivePinSignal(1, null);
-                        Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                        outputSignal = 0;
-                    }
-                    else if (!revert)
-                    {
-                        if (inputX && !inputY && !inputZ)
-                        {
-                            coreData.aiAgentObject.GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 0) * force);
-                            outputPins[0].ReceivePinSignal(1, null);
-                            Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                            outputSignal = 0;
-                        }
-                        if (!inputX && inputY && !inputZ)
-                        {
-                            coreData.aiAgentObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 0) * force);
-                            outputPins[0].ReceivePinSignal(1, null);
-                            Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                            outputSignal = 0;
-                        }
-                        if (inputX && !inputY && inputZ)
-                        {
-                            coreData.aiAgentObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 1) * force);
-                            outputPins[0].ReceivePinSignal(1, null);
-                            Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                            outputSignal = 0;
-                        }
-                    }
-                }
+                Debug.Log("[NODE]: " + gameObject.name + " has process signal.");
+
+                AddforceToObject(0, 0, 0, force);
+                outputPins[0].ReceivePinSignal(outputSignal, null);
+                outputSignal = 0;
             }
+        }
+
+        public void UseXAxis()
+        {
+            if (toggelX.isOn)
+            {
+                inputX = true;
+            }
+            else 
+            {
+                inputX = false;
+            }
+        }
+
+        public void UseYAxis()
+        {
+            if (toggelY.isOn)
+            {
+                inputY = true;
+            }
+            else
+            {
+                inputY = false;
+            }
+        }
+
+        public void UseZAxis()
+        {
+            if (toggelZ.isOn)
+            {
+                inputZ = true;
+            }
+            else
+            {
+                inputZ = false;
+            }
+        }
+
+        public void ChangeForceOutput()
+        {
+            force = int.Parse(forceInputField.text);
+        }
+
+        public void IsRevertOn()
+        {
+            if (toggelRevert.isOn)
+            {
+                revert = true;
+            }
+            else
+            {
+                revert = false;
+            }
+        }
+
+        void AddforceToObject(float m_XAxis, float m_YAxis, float m_ZAxis, float m_Force)
+        {
+            if (!inputX) m_XAxis = 0;
+            else if (inputX & revert) m_XAxis =- 1;
+            else m_XAxis = 1;
+
+            if (!inputY) m_YAxis = 0;
+            else if (inputY & revert) m_YAxis = -1;
+            else m_YAxis = 1;
+
+            if (!inputZ) m_ZAxis = 0;
+            else if (inputZ & revert) m_ZAxis =- 1;
+            else m_ZAxis = 1;
+
+            shipRb.AddForce(new Vector3(m_XAxis, m_YAxis, m_ZAxis) * m_Force, ForceMode.VelocityChange); ;
         }
     }
 }

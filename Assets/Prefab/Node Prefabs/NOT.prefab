@@ -167,6 +167,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1288203433750287590}
   m_maskType: 0
+  _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
 --- !u!1 &4593239318413723440
@@ -319,8 +320,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6032147758950171734}
   - component: {fileID: 7324175135072247657}
-  - component: {fileID: 6691729972211648995}
   - component: {fileID: 3923877019032294372}
+  - component: {fileID: 6691729972211648995}
   m_Layer: 10
   m_Name: NOT
   m_TagString: Node
@@ -357,6 +358,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.89084804, y: 0.5024986, z: 0.014156923}
   m_Center: {x: -0.0013374686, y: -0.001426816, z: 0.03414382}
+--- !u!114 &3923877019032294372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7380796763261334471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60276d5717fc599438152e5b6f27d1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractble: 1
+  holdInteract: 1
 --- !u!114 &6691729972211648995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,24 +389,8 @@ MonoBehaviour:
   outputPins:
   - {fileID: 7981811787339685025}
   nodeName: NOT
-  nodeSprite: {fileID: 0}
   currentState: 0
-  nodeColorOff: {r: 0, g: 0, b: 0, a: 0}
-  nodeColorOn: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &3923877019032294372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7380796763261334471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60276d5717fc599438152e5b6f27d1a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInteractble: 1
-  holdInteract: 1
+  nodeUi: 0
 --- !u!1 &7752414217689851267
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +442,7 @@ MonoBehaviour:
   pinType: 1
   parentPin: {fileID: 0}
   childPins: []
+  currentState: 0
 --- !u!212 &3897021272329272398
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -590,6 +590,7 @@ MonoBehaviour:
   pinType: 0
   parentPin: {fileID: 0}
   childPins: []
+  currentState: 0
 --- !u!212 &7549558908099284093
 SpriteRenderer:
   m_ObjectHideFlags: 0

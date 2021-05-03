@@ -12,33 +12,28 @@ namespace BH
         public PinType pinType;
 
         // The pin from which this pin receives its input signal.
-        [HideInInspector] public Pin parentPin;
+        public Pin parentPin;
 
         // The pins which this pin forwards its signal to.
         [HideInInspector] public List<Pin> childPins = new List<Pin>();
 
         //Current state of pin, 0 = off, 1 = on?
-        [SerializeField]
-        int currentState;
+        [SerializeField] int currentState;
 
-        bool isAiCore;
         public int State => currentState;
 
-        public bool HasParent => parentPin != null | pinType == PinType.NodeOutput;
-
-        public bool IsAiCore
+        public bool HasParent
         {
-            get => isAiCore;
-            set => isAiCore = value;
+            get 
+            {
+                return parentPin != null | pinType == PinType.NodeOutput;
+            }
         }
 
-        // Receive signal: 0 or 1 
-        // Sets the current state to the signal
-        // Passes the signal and gameObject ref on to any connected pin.
         public void ReceivePinSignal(int signal, GameObject senderObject)
         {
             currentState = signal;
-            if (pinType == PinType.NodeInput && !IsAiCore)
+            if (pinType == PinType.NodeInput)
             {
                 //Debug.Log("[PIN]:" + gameObject.name + " Recive signal as a Input!");
                 if (node != null)
@@ -51,7 +46,6 @@ namespace BH
                     node = null;
                     currentState = 0;
                 }
-                
             }
 
             else if (pinType == PinType.NodeOutput)
@@ -63,6 +57,71 @@ namespace BH
                     currentState = 0;
                 }
             }
+        }
+        
+        public static void MakeConnection(Pin m_pinA, Pin m_pinB)
+        {
+            //Debug.Log("MakeConnection called on: " + gameObject.name);
+            if (IsValidConnection(m_pinA, m_pinB))
+            {
+                Pin m_parentPin;                
+                Pin m_childPin;
+
+                if (m_pinA.pinType == PinType.NodeOutput)
+                {
+                    m_parentPin = m_pinA;
+                }
+                else
+                {
+                    m_parentPin = m_pinB;
+                }
+
+                if (m_pinA.pinType == PinType.NodeInput)
+                {
+                    m_childPin = m_pinA;
+                }
+                else
+                {
+                    m_childPin = m_pinB;
+                }
+
+                m_parentPin.childPins.Add(m_childPin);
+                m_childPin.parentPin = m_parentPin;
+            }
+        }
+
+        public static void RemoveConnection(Pin m_pinA, Pin m_pinB)
+        {
+            Pin m_parentPin;
+            Pin m_childPin;
+            if (m_pinA.pinType == PinType.NodeOutput)
+            {
+                m_parentPin = m_pinA;
+            }
+            else
+            {
+                m_parentPin = m_pinB;
+            }
+            if (m_pinA.pinType == PinType.NodeInput)
+            {
+                m_childPin = m_pinA;
+            }
+            else
+            {
+                m_childPin = m_pinB;
+            }
+            m_parentPin.childPins.Remove(m_childPin);
+            m_childPin.parentPin = null;
+        }
+
+        public static bool IsAlreadyConnected(Pin m_endPin)
+        {
+            return m_endPin.parentPin;
+        }
+
+        public static bool IsValidConnection(Pin m_pinA, Pin m_pinB)
+        {
+            return m_pinA.pinType != m_pinB.pinType & m_pinA & m_pinB;
         }
 
         public static bool TryConnect(Pin pinA, Pin pinB)
@@ -97,63 +156,6 @@ namespace BH
                 return true;
             }
             return false;
-        }
-
-        public static bool IsValidConnection(Pin m_pinA, Pin m_pinB)
-        {
-            return m_pinA.pinType != m_pinB.pinType;
-        }
-
-        public static void MakeConnection(Pin m_pinA, Pin m_pinB)
-        {
-            //Debug.Log("MakeConnection called on: " + gameObject.name);
-            if (IsValidConnection(m_pinA, m_pinB))
-            {
-                Pin m_parentPin;                
-                Pin m_childPin;
-                if (m_pinA.pinType == PinType.NodeOutput)
-                {
-                    m_parentPin = m_pinA;
-                }
-                else
-                {
-                    m_parentPin = m_pinB;
-                }
-                if (m_pinA.pinType == PinType.NodeInput)
-                {
-                    m_childPin = m_pinA;
-                }
-                else
-                {
-                    m_childPin = m_pinB;
-                }
-                m_parentPin.childPins.Add(m_childPin);
-                m_childPin.parentPin = m_parentPin;
-            }
-        }
-
-        public static void RemoveConnection(Pin m_pinA, Pin m_pinB)
-        {
-            Pin m_parentPin;
-            Pin m_childPin;
-            if (m_pinA.pinType == PinType.NodeOutput)
-            {
-                m_parentPin = m_pinA;
-            }
-            else
-            {
-                m_parentPin = m_pinB;
-            }
-            if (m_pinA.pinType == PinType.NodeInput)
-            {
-                m_childPin = m_pinA;
-            }
-            else
-            {
-                m_childPin = m_pinB;
-            }
-            m_parentPin.childPins.Remove(m_childPin);
-            m_childPin.parentPin = null;
         }
     }
 }

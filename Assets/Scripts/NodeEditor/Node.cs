@@ -11,17 +11,18 @@ namespace BH
 
         int numberOfSignalsRecived;
 
-        public  virtual void ReceiveInputSignal(Pin pin, GameObject senderObject)
+        public  virtual void ReceiveInputSignal(Pin pin, GameObject m_shipRefrance)
         {
             numberOfSignalsRecived++;
+
             if (numberOfSignalsRecived == inputPins.Length) 
             {
-                ProcessOutput();
+                ProcessOutput(m_shipRefrance);
                 numberOfSignalsRecived = 0;
             }
         }
 
-        public virtual void ProcessOutput() { }
+        public virtual void ProcessOutput(GameObject m_shipRefrance) { }
     }
 }
 

@@ -1,55 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BH.Data;
 
 namespace BH
 {
     public class SimulationLoop : MonoBehaviour
     {
-		public static int simulationFrame { get; private set; }
 
-		NodeEditor nodeEditor;
-
-		public List<BaseNode> allNodes;
+		public GameManger gameManger;
 
         public float minStepTime = 0.075f;
-        float lastStepTime;
+        float currentStepTime;
+
+        public bool simulationState = false;
 
         void Awake()
         {
-            simulationFrame = 0;
-        }
+			currentStepTime = 0;
+		}
 
-        // Update is called once per frame
-        void Update()
+        public void StartSimLoop()
         {
-
+            simulationState = true;
         }
+
+        public void StopSimLoop()
+        {
+            simulationState = false;
+        }
+
+        void FixedUpdate()
+        {
+            if (simulationState)
+            {
+                if (currentStepTime >= minStepTime)
+                {
+                    StepSimulation();
+                    currentStepTime = 0;
+                }
+                else
+                {
+                    currentStepTime++;
+                }
+            }
+		}
 
 		void StepSimulation()
 		{
-			simulationFrame++;
-			RefreshChipEditorReference();
+            if (gameManger.IsInDebugMode)
+            {
+                gameManger.UpdateAgentInDebugMode();
+            }
+            else
+            {
+                gameManger.UpdateAgentsInPlayMode();
+                // Process inputs
+                //List<NodeVisual> inputSignals = nodeEditor.inputsEditor.signals;
+                // Tell all signal generators to send their signal out
+                //for (int i = 0; i < inputSignals.Count; i++)
+                //{
+                //	(InputSignal)inputSignals[i]).SendSignal();
+                //}
+            }
 
-			
 
-			// Process inputs
-			//List<NodeVisual> inputSignals = nodeEditor.inputsEditor.signals;
-			// Tell all signal generators to send their signal out
-			//for (int i = 0; i < inputSignals.Count; i++)
-			//{
-			//	(InputSignal)inputSignals[i]).SendSignal();
-			//}
 
-		}
-
-		void RefreshChipEditorReference()
-		{
-			if (nodeEditor == null)
-			{
-				nodeEditor = FindObjectOfType<NodeEditor>();
-			}
-		}
+        }
 	}
 }
 

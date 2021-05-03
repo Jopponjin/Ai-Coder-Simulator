@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1362442686424489722}
   - component: {fileID: 1907043049337591420}
   m_Layer: 5
-  m_Name: Y-Axel
+  m_Name: Y-Axis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,8 +84,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 2838857690430826316}
+        m_TargetAssemblyTypeName: BH.ThrusterNode, Assembly-CSharp
+        m_MethodName: UseYAxis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &77892144953813244
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractble: 1
   holdInteract: 0
-  node: {fileID: 0}
+  node: {fileID: 2838857690430826316}
   pinType: 0
   parentPin: {fileID: 0}
   childPins: []
@@ -345,7 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractble: 1
   holdInteract: 0
-  node: {fileID: 0}
+  node: {fileID: 2838857690430826316}
   pinType: 1
   parentPin: {fileID: 0}
   childPins: []
@@ -398,7 +410,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.89084804, y: 0.5024986, z: 0.014156923}
-  m_Center: {x: -0.0013374686, y: -0.001426816, z: 0.03414382}
+  m_Center: {x: 0, y: 0.12, z: 0.03414382}
 --- !u!114 &4511864495020209279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,15 +442,18 @@ MonoBehaviour:
   outputPins:
   - {fileID: 1380404576917359287}
   nodeName: Thruster
-  nodeSprite: {fileID: 0}
   currentState: 0
-  nodeColorOff: {r: 0, g: 0, b: 0, a: 0}
-  nodeColorOn: {r: 0, g: 0, b: 0, a: 0}
-  coreData: {fileID: 0}
-  revert: {fileID: 4545595079472394905}
-  inputX: {fileID: 8352207992086001653}
-  inputY: {fileID: 1907043049337591420}
-  inputZ: {fileID: 9048818879398415927}
+  nodeUi: 0
+  shipData: {fileID: 11400000, guid: 312e17c4688406646aea3de50712e825, type: 2}
+  forceInputField: {fileID: 876607317731740211}
+  toggelRevert: {fileID: 4545595079472394905}
+  toggelX: {fileID: 8352207992086001653}
+  toggelY: {fileID: 1907043049337591420}
+  toggelZ: {fileID: 9048818879398415927}
+  revert: 0
+  inputX: 0
+  inputY: 0
+  inputZ: 0
   force: 10
 --- !u!1 &1992320950649665121
 GameObject:
@@ -524,7 +539,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2838857690430826316}
+        m_TargetAssemblyTypeName: BH.ThrusterNode, Assembly-CSharp
+        m_MethodName: IsRevertOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &2242997167612749535
 GameObject:
@@ -687,7 +714,7 @@ GameObject:
   - component: {fileID: 6990536402374805443}
   - component: {fileID: 8352207992086001653}
   m_Layer: 5
-  m_Name: X-Axel
+  m_Name: X-Axis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -760,8 +787,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 2838857690430826316}
+        m_TargetAssemblyTypeName: BH.ThrusterNode, Assembly-CSharp
+        m_MethodName: UseXAxis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &3261248310169618380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,7 +1343,7 @@ GameObject:
   - component: {fileID: 4747129706249643734}
   - component: {fileID: 9048818879398415927}
   m_Layer: 5
-  m_Name: Z-Axel
+  m_Name: Z-Axis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,8 +1416,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 2838857690430826316}
+        m_TargetAssemblyTypeName: BH.ThrusterNode, Assembly-CSharp
+        m_MethodName: UseZAxis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &5193636703494362103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,6 +1931,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7786063032954389232}
   m_maskType: 0
+  _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
 --- !u!1 &6385471148281093165
@@ -2172,7 +2224,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2838857690430826316}
+        m_TargetAssemblyTypeName: BH.ThrusterNode, Assembly-CSharp
+        m_MethodName: ChangeForceOutput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}

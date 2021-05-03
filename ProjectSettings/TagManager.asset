@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Node
   - Pin
+  - Wire
   layers:
   - Default
   - TransparentFX

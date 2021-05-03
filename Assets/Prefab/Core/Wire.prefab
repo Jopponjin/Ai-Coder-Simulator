@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3572294844481022545}
   - component: {fileID: 1881659047471035781}
-  - component: {fileID: 3998274242488194433}
   - component: {fileID: 6512885927190320191}
-  m_Layer: 0
+  - component: {fileID: 2481913596003377743}
+  m_Layer: 7
   m_Name: Wire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,10 +75,10 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 2, y: 0, z: 0}
+  - {x: 1, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.05
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -131,28 +131,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!68 &3998274242488194433
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6993681336802886633}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.08
-  m_Points:
-  - {x: -0.024999976, y: 0}
-  - {x: 2.025, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!114 &6512885927190320191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,8 +143,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e800e0b64cc230f4cb0773ba67d35796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0.08
-  wireCollider: {fileID: 3998274242488194433}
+  boxCollider: {fileID: 0}
   wireConnected: 0
   startPin: {fileID: 0}
   endPin: {fileID: 0}
+  colAngle: 0
+--- !u!65 &2481913596003377743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993681336802886633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0.5, y: 0, z: 0}

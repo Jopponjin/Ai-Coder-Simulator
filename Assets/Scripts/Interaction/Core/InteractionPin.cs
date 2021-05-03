@@ -58,6 +58,7 @@ namespace BH
                 {
                     if (m_hit.transform.gameObject != null)
                     {
+                        Debug.Log("[INTERACTIONPIN]: Hit an objects");
                         if (m_hit.transform.gameObject.CompareTag("Pin"))
                         {
                             currentInteractionObject = m_hit.transform.gameObject;
@@ -91,6 +92,7 @@ namespace BH
                 if (currentInteractionObject.GetComponentInChildren<Pin>())
                 {
                     Pin m_Pin = currentInteractionObject.GetComponentInChildren<Pin>();
+
                     //Debug.Log(" Found PIN class in:" + m_Pin.transform.gameObject.name);
                     if (m_Pin.pinType == Pin.PinType.NodeOutput)
                     {
@@ -108,9 +110,9 @@ namespace BH
                 {
                     //Debug.Log("Made connection between: " + pin1.gameObject.name + " And " + pin2.gameObject.name);
                     //Debug.Log("Pin 1 location" + pin1.transform.position);
-                    Pin.MakeConnection(pin1, pin2);
-                    pinAndWireHandler.HandleWireCreation(pin1);
+
                     pinAndWireHandler.HandleWirePlacement(pin1, pin2);
+
                     pin1 = null;
                     pin2 = null;
                 }

@@ -7,24 +7,24 @@ namespace BH
     public class Wire : MonoBehaviour
     {
         //public Material simpleMat;
-        LineRenderer lineRenderer;
         //public Color editCol;
         //public int resolution = 10;
         //public float selectedThickness = 1.2f;
 
-        public EdgeCollider2D wireCollider;
+        LineRenderer lineRenderer;
 
+        public BoxCollider boxCollider;
         public bool wireConnected;
-
         public Pin startPin;
         public Pin endPin;
         float depth;
-        bool selected;
+        [SerializeField]
+        float colAngle;
 
         void Awake()
         {
             lineRenderer = GetComponent<LineRenderer>();
-            wireCollider = GetComponent<EdgeCollider2D>();
+            //boxCollider = GetComponent<BoxCollider>();
         }
 
         public Pin NodeInputPin 
@@ -64,16 +64,20 @@ namespace BH
                 float m_depthOffset = 3f;
                 transform.localPosition = Vector3.back * (depth + m_depthOffset);
 
-                UpadteWireStartPoint(startPin.transform.position);
-                UpdateWireEndPoint(endPin.transform.position);
+                UpdateWirePositions(startPin.transform.position, endPin.transform.position);
                 UpdateColliderPosition(startPin.transform.position, endPin.transform.position);
             }
         }
 
         public void Connect(Pin m_inputPin,   Pin m_outputPin)
         {
-            ConnectToFirstPinWithWire(m_inputPin);
+            ConnectToFirstPin(m_inputPin);
             Place(m_outputPin);
+        }
+
+        public void ConnectToFirstPin(Pin m_startPin)
+        {
+            startPin = m_startPin;
         }
 
         public void ConnectToFirstPinWithWire(Pin m_startPin)
@@ -81,31 +85,50 @@ namespace BH
             startPin = m_startPin;
         }
 
-        // Connect the input pin to the output pin.
         public void Place(Pin m_endPin)
         {
             endPin = m_endPin;
             wireConnected = true;
         }
 
-        public void UpadteWireStartPoint(Vector2 m_startPinPos)
+        public void UpdateWirePositions(Vector3 m_startPinPos, Vector3 m_endPinPos)
         {
+            gameObject.transform.position = new Vector3(0, 0, 0);
             lineRenderer.SetPosition(0, m_startPinPos);
-        }
-
-        public void UpdateWireEndPoint(Vector2 m_endPinPos)
-        {
             lineRenderer.SetPosition(lineRenderer.positionCount - 1, m_endPinPos);
         }
 
-        public void UpdateColliderPosition(Vector2 m_startPos, Vector2 m_endPos)
+        public void UpdateColliderPosition(Vector3 m_startPos, Vector3 m_endPos)
         {
-            if (wireConnected)
+            if (boxCollider != null)
             {
-                Vector2[] m_wireColPos = wireCollider.points;
-                m_wireColPos[0] = m_startPos;
-                m_wireColPos[m_wireColPos.Length - 1] = m_endPos;
-                wireCollider.points = m_wireColPos;
+                if (wireConnected)
+                {
+                    //boxCollider.transform.parent = lineRenderer.transform;
+
+                    //float lineLength = Vector3.Distance(m_startPos, m_endPos);
+                    //boxCollider.size = new Vector3(lineLength, 0.5f, 0.1f);
+
+                    //Vector3 colDirection = m_startPos - m_endPos;
+
+                    //Vector3 midPoint = (m_startPos + m_endPos) / 2;
+                    //midPoint = new Vector3(midPoint.x - 1f, midPoint.y, midPoint.z);
+
+                    //Quaternion rotationTarget = Quaternion.LookRotation(-colDirection);
+
+                    //boxCollider.transform.position = midPoint;
+                    //boxCollider.transform.rotation = rotationTarget;
+
+                    //colAngle = (Mathf.Abs(m_startPos.y - m_endPos.y) / Mathf.Abs(m_startPos.x - m_endPos.x));
+                    //colAngle = Mathf.Rad2Deg * Mathf.Atan(colAngle);
+
+
+
+                    //if (boxCollider.transform.rotation.z != colAngle)
+                    //{
+                    //    boxCollider.transform.rotation = Quaternion.AngleAxis(colAngle, Vector3.forward);
+                    //}
+                }
             }
         }
     }

@@ -1,18 +1,123 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using BH.Data;
 
-public class RotatorNode : MonoBehaviour
+
+namespace BH
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RotatorNode : BaseNode
     {
-        
-    }
+        [SerializeField] ShipData shipData;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [Space]
+        [SerializeField] Toggle toggelRevert;
+
+        [SerializeField] Toggle toggelX;
+
+        [SerializeField] Toggle toggelY;
+
+        [SerializeField] Toggle toggelZ;
+        [Space]
+
+        [SerializeField] int force;
+
+        [Space]
+        [SerializeField] bool revert;
+
+        [SerializeField] bool inputX;
+
+        [SerializeField] bool inputY;
+
+        [SerializeField] bool inputZ;
+
+        Rigidbody shipRb;
+
+        private void Awake()
+        {
+            shipRb = shipData.ShipGameObject.GetComponent<Rigidbody>();
+        }
+
+        public override void ProcessOutput(GameObject m_shipRefrance)
+        {
+            int outputSignal = inputPins[0].State;
+
+            if (outputSignal >= 1 & shipRb != null)
+            {
+                Debug.Log("[NODE]: " + gameObject.name + " has process signal.");
+                outputPins[0].ReceivePinSignal(outputSignal, null);
+                AddRotation(0 ,0 , 0, force);
+                outputSignal = 0;
+            }
+        }
+
+        public void IsRevertOn()
+        {
+            if (toggelRevert.isOn)
+            {
+                revert = true;
+            }
+            else
+            {
+                revert = false;
+            }
+        }
+
+        public void UseXAxis()
+        {
+            if (toggelX.isOn)
+            {
+                inputX = true;
+            }
+            else
+            {
+                inputX = false;
+            }
+        }
+
+        public void UseYAxis()
+        {
+            if (toggelY.isOn)
+            {
+                inputY = true;
+            }
+            else
+            {
+                inputY = false;
+            }
+        }
+
+        public void UseZAxis()
+        {
+            if (toggelZ.isOn)
+            {
+                inputZ = true;
+            }
+            else
+            {
+                inputZ = false;
+            }
+        }
+
+        void AddRotation(float m_XAxis, float m_YAxis, float m_ZAxis, float m_Force)
+        {
+
+            if (!inputX) m_XAxis = 0;
+            else if (inputX & revert) m_XAxis = -1;
+            else m_XAxis = 1;
+
+            if (!inputY) m_YAxis = 0;
+            else if (inputY & revert) m_YAxis = -1;
+            else m_YAxis = 1;
+
+            if (!inputZ) m_ZAxis = 0;
+            else if (inputZ & revert) m_ZAxis = -1;
+            else m_ZAxis = 1;
+
+            shipRb.AddTorque(new Vector3(m_XAxis, m_YAxis, m_ZAxis) * m_Force);
+        }
+
     }
 }
+

@@ -7,18 +7,16 @@ namespace BH
 {
     public class NodeEditor : MonoBehaviour
     {
-        public AiCoreScript coreScript;
         public NodeDataPack nodeDataPack;
+        public List<GameObject> allNodesInEditor;
 
         Timer timer;
-
-        [SerializeField]
-        AiCoreData coreData;
-
+        [Header("Debug")]
         [SerializeField]
         bool isLoopingSignal;
 
-        public List<GameObject> allNodesInEditor;
+        [SerializeField]
+        bool isDebugMode;
 
         // Start is called before the first frame update
         void Awake()
@@ -43,26 +41,13 @@ namespace BH
 
         }
 
-        // Update is called once per frame
-        void Update()
+        public void SendDebugSignal()
         {
-            if (isLoopingSignal)
-            {
-                if (timer.ExpireReset())
-                {
-                    SendSignalFromAiCore();
-                }
-            }
-        }
-
-        public void SendSignalFromAiCore()
-        {
-            coreScript.SendSignalToPin();
+            
         }
 
         public void CreateNode(string nodeName)
         {
-            //Debug.Log("[EVENTSYS]: Node editor event called!");
             for (int i = 0; i < allNodesInEditor.Count; i++)
             {
                 if (allNodesInEditor[i].gameObject.name == nodeName)
@@ -71,8 +56,6 @@ namespace BH
                     Debug.Log("[EVENTSYS]: Created " + allNodesInEditor[i].gameObject.name +" node!");
                 }
             }
-            
         }
-
     }
 }

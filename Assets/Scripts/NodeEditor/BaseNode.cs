@@ -8,24 +8,39 @@ namespace BH
     {
         [Header("Debug")]
         public string nodeName;
-        public SpriteRenderer nodeSprite;
         public int currentState;
-        public Color nodeColorOff;
-        public Color nodeColorOn;
-        
-        public void SetDisplayState(int state)
+
+        public enum NodeUiState
         {
-            if (nodeSprite != null)
+            None,
+            Selected,
+            OnHold
+        }
+
+        public NodeUiState nodeUi;
+
+        public void SelectSignal(int UiState)
+        {
+            switch (UiState)
             {
-                if (state == 1)
-                {
-                    nodeSprite.color = nodeColorOn;
-                }
-                else
-                {
-                    nodeSprite.color = nodeColorOff;
-                }
+                case 0:
+                    nodeUi = NodeUiState.None;
+                    break;
+                case 1:
+                    nodeUi = NodeUiState.Selected;
+                    break;
+                case 2:
+                    nodeUi = NodeUiState.OnHold;
+                    break;
+                default:
+                    nodeUi = NodeUiState.None;
+                    break;
             }
+        }
+
+        public void SetHighlighted()
+        {
+
         }
     }
 }

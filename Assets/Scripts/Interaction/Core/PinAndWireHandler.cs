@@ -7,112 +7,108 @@ namespace BH
 {
 	public class PinAndWireHandler : MonoBehaviour
 	{
-		public event System.Action onConnectionChanged;
-
 		public Transform wireHolder;
 		public Wire wirePrefab;
 
-		[Header("Debug")]
-		[SerializeField]
-		Wire wireToPlace;
-
 		[SerializeField]
 		Pin wireStartPin;
+		[SerializeField]
+		Wire wireToPlace;
 
 		Dictionary<Pin, Wire> wiresByNodeInputPin;
 		public List<Wire> allWires { get; private set; }
 
-        private void Awake()
+		public enum PinWireState { None, PlacingWire }
+		public PinWireState currentState;
+
+		private void Awake()
         {
 			allWires = new List<Wire>();
 			wiresByNodeInputPin = new Dictionary<Pin, Wire>();
 		}
 
-        public void HandleWireCreation(Pin startPin)
+		public void HandleWirePlacement(Pin m_startPin, Pin m_endPin)
         {
-			wireToPlace = Instantiate(wirePrefab, Vector3.zero, gameObject.transform.rotation);
-
-			if (startPin)
+			if (Pin.IsValidConnection(m_startPin, m_endPin))
 			{
-				wireStartPin = startPin;
+				Debug.Log("[PIN-WIRE]:'IsValidConnection()' returned TRUE!");
+
+				Pin nodeInputPin = (m_startPin.pinType == Pin.PinType.NodeInput) ? m_startPin : m_endPin;
+
+				RemoveConflictWire(nodeInputPin);
+
+				wireStartPin = m_startPin;
+				wireToPlace = Instantiate(wirePrefab, Vector3.zero, gameObject.transform.rotation);
+
+				wireToPlace.ConnectToFirstPin(wireStartPin);
 				wireToPlace.ConnectToFirstPinWithWire(wireStartPin);
-			}
-		}
+				wireToPlace.UpdateWirePositions(m_startPin.transform.position, m_endPin.transform.position);
+				wireToPlace.Place(m_endPin);
 
-		public void HandleWirePlacement(Pin startPin, Pin endPin)
-        {
-            //Debug.Log("[PIN-WIRE]: 'HandleWirePlacement' called!");
-            if (Pin.IsValidConnection(startPin, endPin))
-            {
-				Pin nodeInputPin = (startPin.pinType == Pin.PinType.NodeInput) ? startPin : endPin;
-
-				wireToPlace.UpadteWireStartPoint(startPin.transform.position);
-				wireToPlace.UpdateWireEndPoint(endPin.transform.position);
-
-				wireToPlace.Place(endPin);
-				Pin.MakeConnection(startPin, endPin);
+				Pin.MakeConnection(m_startPin, m_endPin);
 				allWires.Add(wireToPlace);
 				wiresByNodeInputPin.Add(nodeInputPin, wireToPlace);
 
+				//wireStartPin = null;
 				wireToPlace = null;
-				onConnectionChanged?.Invoke();
 			}
-            else
-            {
+			else
+			{
 				StopPlaceingWire();
-            }
-        }
+			}
+		}
 
-		public void DeleteNodeWires(Node node)
+		public void DeleteNodeWires(Node m_node)
         {
 			List<Wire> wiresToDestroy = new List<Wire>();
-			Debug.Log("[PIN&WIRE]: Called deleteNodeWires on: " + node.transform.gameObject.name);
+			Debug.Log("[PIN&WIRE]: Called deleteNodeWires on: " + m_node.transform.gameObject.name);
 
-            foreach (var outputPins in node.outputPins)
-            {
-                foreach (var childPin in outputPins.childPins)
-                {
+			foreach (var outputPins in m_node.outputPins)
+			{
+				foreach (var childPin in outputPins.childPins)
+				{
 					wiresToDestroy.Add(wiresByNodeInputPin[childPin]);
-                }
-            }
-			foreach (var inputPin in node.inputPins)
+				}
+			}
+
+			foreach (var inputPin in m_node.inputPins)
 			{
 				if (inputPin.parentPin)
 				{
 					wiresToDestroy.Add(wiresByNodeInputPin[inputPin]);
 				}
 			}
+
 			for (int i = 0; i < wiresToDestroy.Count; i++)
 			{
 				wiresToDestroy[i].wireConnected = false;
 				DestroyWire(wiresToDestroy[i]);
 			}
-
 		}
 
-		public Wire GetWire(Pin childPin)
+		public Wire GetWire(Pin m_childPin)
         {
-            if (wiresByNodeInputPin.ContainsKey(childPin))
+            if (wiresByNodeInputPin.ContainsKey(m_childPin))
             {
-				return wiresByNodeInputPin[childPin];
+				return wiresByNodeInputPin[m_childPin];
             }
 			return null;
         }
 
-		void DestroyWire(Wire wire)
+		void DestroyWire(Wire m_wire)
         {
-			wiresByNodeInputPin.Remove(wire.NodeInputPin);
-			allWires.Remove(wire);
-			Pin.RemoveConnection(wire.startPin, wire.endPin);
-			Destroy(wire.gameObject);
+			wiresByNodeInputPin.Remove(m_wire.NodeInputPin);
+			allWires.Remove(m_wire);
+			Pin.RemoveConnection(m_wire.startPin, m_wire.endPin);
+			Destroy(m_wire.gameObject);
 
         }
 
-		void RemoveConflictWire(Pin pin)
+		void RemoveConflictWire(Pin m_pin)
         {
-			if (wiresByNodeInputPin.ContainsKey(pin))
+			if (wiresByNodeInputPin.ContainsKey(m_pin))
             {
-				DestroyWire(wiresByNodeInputPin[pin]);
+				DestroyWire(wiresByNodeInputPin[m_pin]);
             }
         }
 

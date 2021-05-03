@@ -14,6 +14,4 @@ public class AiCoreData : ScriptableObject
         set => aiAgentObject = value;
         get => aiAgentObject;
     }
-
-
 }

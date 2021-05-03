@@ -6,15 +6,16 @@ namespace BH
 {
     public class ANDNode : BaseNode
     {
-        public override void ProcessOutput()
+        public override void ProcessOutput(GameObject m_shipRefrance)
         {
+            
             int outputSignal = inputPins[0].State & inputPins[1].State;
 
-            if (outputSignal >= 1)
+            if (outputSignal > 1)
             {
-                outputPins[0].ReceivePinSignal(1, null);
-                Debug.Log("[NODE] " + gameObject.name + "Has process signal.");
-                outputSignal = 0;
+                Debug.Log("[NODE] " + gameObject.name + "Has process signal. " + outputSignal);
+                outputPins[0].ReceivePinSignal(outputSignal, m_shipRefrance);
+                
             }
         }
     }
