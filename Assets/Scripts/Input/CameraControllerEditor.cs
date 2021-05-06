@@ -10,13 +10,17 @@ public class CameraControllerEditor : MonoBehaviour
     Camera playerCamera = default;
 
     [SerializeField]
-    int cameraFOV = 80;
+    int cameraFOV = 90;
 
-    [SerializeField] bool isInEditor;
-
-    [SerializeField] bool isInDebug;
-
-    [SerializeField] bool isInPlay;
+    public enum CameraState
+    {
+        None,
+        Editor,
+        Debug,
+        Stop,
+        Play
+    }
+    public CameraState cameraState;
 
     [Space]
     [Header("Zoom")]
@@ -30,7 +34,7 @@ public class CameraControllerEditor : MonoBehaviour
     float scrollInput;
 
     [Header("Mouse Drag")]
-    [SerializeField] float dragSpeed = 2;
+    [SerializeField] float mousedragSens = 2;
 
     [SerializeField] Vector3 mouseOrigin;
 
@@ -52,6 +56,11 @@ public class CameraControllerEditor : MonoBehaviour
     float maxAngelY;
     float minAngelY;
 
+    Vector3 initEditorPos;
+    Vector3 initEditorRot;
+
+    Vector3 mouseDragStart;
+
     #region Misc Variables
 
     float elapsedTime;
@@ -60,38 +69,50 @@ public class CameraControllerEditor : MonoBehaviour
     #endregion
 
 
-    private void Awake()
+    private void Start()
     {
         if (playerCamera == null)
         {
             playerCamera = Camera.main;
         }
 
+        cameraState = CameraState.Editor;
+
         camAngleX = Vector3.Angle(Vector3.right, transform.right);
         camAngleY = Vector3.Angle(Vector3.up, transform.up);
 
+        InitCameraPosition();
     }
 
-    // Update is called once per frame
+    void InitCameraPosition()
+    {
+        initEditorPos = transform.position;
+        initEditorRot = transform.localEulerAngles;
+    }
+
+
     void Update()
     {
-        if (isInEditor)
+        if (cameraState == CameraState.Editor)
         {
             MouseCameraDrag();
             ScrollZoom();
         }
-        if (isInPlay)
+
+        if (cameraState == CameraState.Play)
         {
             FreeCameraMovement();
         }
 
-        elapsedTime += Time.deltaTime;
-        if (elapsedTime >= timeLimit)
+        if (cameraState == CameraState.Debug)
         {
-            ApplyCameraSettings();
-            elapsedTime = 0;
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= timeLimit)
+            {
+                ApplyCameraSettings();
+                elapsedTime = 0;
+            }
         }
-
     }
 
     void ScrollZoom()
@@ -116,14 +137,21 @@ public class CameraControllerEditor : MonoBehaviour
 
     void MouseCameraDrag()
     {
-        if (Input.GetMouseButtonDown(2))
+        if (cameraState == CameraState.Editor)
         {
-            //Debug.Log("");
-            //dragOrigin = Input.mousePosition;
-            //Vector3 mouseScreenPos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-
-            //Vector3 move = new Vector3(mouseScreenPos.x * dragSpeed, 0, mouseScreenPos.y * dragSpeed);
-            //transform.Translate(move, Space.World);
+            if (Input.GetMouseButtonDown(2))
+            {
+                mouseDragStart = new Vector3(-Input.mousePosition.x, -Input.mousePosition.y, transform.position.z);
+                mouseDragStart = Camera.main.ScreenToWorldPoint(mouseDragStart);
+                mouseDragStart.z = transform.position.z;
+            }
+            if (Input.GetMouseButton(2))
+            {
+                Vector3 mouseDragDir = new Vector3(-Input.mousePosition.x, -Input.mousePosition.y, transform.position.z);
+                mouseDragDir = Camera.main.ScreenToWorldPoint(mouseDragDir);
+                mouseDragDir.z = transform.position.z;
+                transform.position = transform.position - (mouseDragDir - mouseDragStart);
+            }
         }
     }
 
@@ -195,7 +223,48 @@ public class CameraControllerEditor : MonoBehaviour
     {
         playerCamera.fieldOfView = cameraFOV;
     }
+    
+    public void SetCameraState(int m_stateNumber)
+    {
+        if (m_stateNumber == 1)
+        { 
+            cameraState = CameraState.Editor;
+            ApplyStateSettings(CameraState.Editor);
+        }
+        if (m_stateNumber == 2) 
+        { 
+            cameraState = CameraState.Debug;
+            ApplyStateSettings(CameraState.Debug);
+        }
+        if (m_stateNumber == 3) 
+        { 
+            cameraState = CameraState.Stop;
+            ApplyStateSettings(CameraState.Stop);
+        }
+        if (m_stateNumber == 4) 
+        { 
+            cameraState = CameraState.Play;
+            ApplyStateSettings(CameraState.Play);
+        }
+    }
 
+    void ApplyStateSettings(CameraState m_cameraState)
+    {
+        if (m_cameraState == CameraState.Stop)
+        {
+            transform.position = initEditorPos;
+            transform.localEulerAngles = initEditorRot;
+            cameraState = CameraState.Editor;
+        }
+    }
+
+    #region State Functions
+
+    
+
+    #endregion
+
+    #region Local Methods
     RaycastHit GetMouseRayHit()
     {
         RaycastHit m_hit;
@@ -222,10 +291,13 @@ public class CameraControllerEditor : MonoBehaviour
 
     private static float ClampAngle(float angle, float min, float max)
     {
-        if (angle < -360)   angle += 360;
-        if (angle > 360)    angle -= 360;
+        if (angle < -360) angle += 360;
+        if (angle > 360) angle -= 360;
 
         return Mathf.Clamp(angle, min, max);
     }
+    #endregion
+
+
 
 }

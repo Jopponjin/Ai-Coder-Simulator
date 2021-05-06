@@ -12,6 +12,8 @@ namespace BH
         [SerializeField] ShipData shipData;
 
         [Space]
+        [SerializeField] InputField forceInputField;
+
         [SerializeField] Toggle toggelRevert;
 
         [SerializeField] Toggle toggelX;
@@ -21,7 +23,7 @@ namespace BH
         [SerializeField] Toggle toggelZ;
         [Space]
 
-        [SerializeField] int force;
+        [SerializeField] int force = 50;
 
         [Space]
         [SerializeField] bool revert;
@@ -32,9 +34,9 @@ namespace BH
 
         [SerializeField] bool inputZ;
 
-        Rigidbody shipRb;
+        [SerializeField] Rigidbody shipRb;
 
-        private void Awake()
+        private void Start()
         {
             shipRb = shipData.ShipGameObject.GetComponent<Rigidbody>();
         }
@@ -46,10 +48,17 @@ namespace BH
             if (outputSignal >= 1 & shipRb != null)
             {
                 Debug.Log("[NODE]: " + gameObject.name + " has process signal.");
+
+                AddRotation(0, 0, 0, force);
+
                 outputPins[0].ReceivePinSignal(outputSignal, null);
-                AddRotation(0 ,0 , 0, force);
                 outputSignal = 0;
             }
+        }
+
+        public void ChangeForceOutput()
+        {
+            force = int.Parse(forceInputField.text);
         }
 
         public void IsRevertOn()
@@ -115,7 +124,7 @@ namespace BH
             else if (inputZ & revert) m_ZAxis = -1;
             else m_ZAxis = 1;
 
-            shipRb.AddTorque(new Vector3(m_XAxis, m_YAxis, m_ZAxis) * m_Force);
+            shipRb.AddRelativeTorque(new Vector3(m_XAxis, m_YAxis, m_ZAxis) * m_Force, ForceMode.VelocityChange);
         }
 
     }

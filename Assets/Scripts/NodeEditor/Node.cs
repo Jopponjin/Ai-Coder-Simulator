@@ -11,7 +11,7 @@ namespace BH
 
         int numberOfSignalsRecived;
 
-        public  virtual void ReceiveInputSignal(Pin pin, GameObject m_shipRefrance)
+        public virtual void ReceiveInputSignal(Pin pin, GameObject m_shipRefrance)
         {
             numberOfSignalsRecived++;
 

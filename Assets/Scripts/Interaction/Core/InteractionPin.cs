@@ -58,7 +58,7 @@ namespace BH
                 {
                     if (m_hit.transform.gameObject != null)
                     {
-                        Debug.Log("[INTERACTIONPIN]: Hit an objects");
+                        //Debug.Log("[INTERACTIONPIN]: Hit an objects");
                         if (m_hit.transform.gameObject.CompareTag("Pin"))
                         {
                             currentInteractionObject = m_hit.transform.gameObject;

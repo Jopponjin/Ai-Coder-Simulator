@@ -27,6 +27,14 @@ namespace BH.Data
             set => shipGameObject = value;
         }
 
+        public bool shipContact;
+        public bool shipContactStay;
+
+        public bool IsColliderInContact()
+        {
+            return shipContact;
+        }
+
         public bool IsShipSet()
         {
             return ShipGameObject == null;

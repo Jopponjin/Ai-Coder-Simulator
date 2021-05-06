@@ -31,7 +31,7 @@ namespace BH
         {
 			if (Pin.IsValidConnection(m_startPin, m_endPin))
 			{
-				Debug.Log("[PIN-WIRE]:'IsValidConnection()' returned TRUE!");
+				//Debug.Log("[PIN-WIRE]:'IsValidConnection()' returned TRUE!");
 
 				Pin nodeInputPin = (m_startPin.pinType == Pin.PinType.NodeInput) ? m_startPin : m_endPin;
 
