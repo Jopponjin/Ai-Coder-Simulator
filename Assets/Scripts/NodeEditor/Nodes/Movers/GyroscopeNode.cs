@@ -39,7 +39,7 @@ public class GyroscopeNode : BaseNode
         if (transform.rotation.x == gyroOriginRot.x)
         {
             Quaternion newRot = Quaternion.RotateTowards(shipRb.rotation, gyroOriginRot, gyroForce);
-            //shipRb.AddTorque()
+            shipRb.MoveRotation(newRot);
         }
     }
 
