@@ -693,15 +693,17 @@ MonoBehaviour:
   currentState: 0
   nodeUi: 0
   shipData: {fileID: 11400000, guid: 312e17c4688406646aea3de50712e825, type: 2}
+  forceInputField: {fileID: 0}
   toggelRevert: {fileID: 4099154204831715513}
   toggelX: {fileID: 8367456426050377173}
   toggelY: {fileID: 2125980702856524892}
   toggelZ: {fileID: 8819720909307259927}
-  force: 10
+  force: 5
   revert: 0
   inputX: 0
   inputY: 0
   inputZ: 0
+  shipRb: {fileID: 0}
 --- !u!1 &3020294272244549390
 GameObject:
   m_ObjectHideFlags: 0

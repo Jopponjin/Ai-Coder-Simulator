@@ -450,11 +450,13 @@ MonoBehaviour:
   toggelX: {fileID: 8352207992086001653}
   toggelY: {fileID: 1907043049337591420}
   toggelZ: {fileID: 9048818879398415927}
+  force: 2
   revert: 0
   inputX: 0
   inputY: 0
   inputZ: 0
-  force: 10
+  shipRb: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!1 &1992320950649665121
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,6 +36,8 @@ namespace BH
 
         [SerializeField] Rigidbody shipRb;
 
+        public Vector3 direction;
+
         private void Awake()
         {
             shipRb = shipData.ShipGameObject.GetComponent<Rigidbody>();
@@ -100,7 +102,8 @@ namespace BH
             else if (inputZ & revert) m_ZAxis =- 1;
             else m_ZAxis = 1;
 
-            shipRb.AddRelativeForce(new Vector3(m_XAxis, m_YAxis, m_ZAxis) * m_Force, ForceMode.VelocityChange);
+            direction = new Vector3(m_XAxis, m_YAxis, m_ZAxis) + shipRb.transform.localPosition.normalized;
+            shipRb.AddRelativeForce(direction * m_Force, ForceMode.VelocityChange);
         }
     }
 }

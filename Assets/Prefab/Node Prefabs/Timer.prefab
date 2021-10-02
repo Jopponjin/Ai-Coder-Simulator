@@ -230,7 +230,7 @@ MonoBehaviour:
   nodeName: Timer
   currentState: 0
   nodeUi: 0
-  timeAmount: 5
+  timeAmount: 1
   timeInputField: {fileID: 245154386795903015}
   isTimerOut: 0
   resetTimer: 0
