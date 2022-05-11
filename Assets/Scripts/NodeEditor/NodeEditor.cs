@@ -18,28 +18,7 @@ namespace BH
         [SerializeField]
         bool isDebugMode;
 
-        // Start is called before the first frame update
-        void Awake()
-        {
-            //if (allNodesInEditor != null)
-            //{
-            //    Debug.Log("[NODEEDITOR]: " + allNodesInEditor.Count + " In editor list.");
-
-            //    for (int i = 0; i < allNodesInEditor.Count; i++)
-            //    {
-            //        if (allNodesInEditor[i] != null)
-            //        {
-            //            nodeDataPack.ListOfNodes.Add(allNodesInEditor[i]);
-            //        }
-            //        else
-            //        {
-            //            Debug.Log("[NODEEDITOR]: " + allNodesInEditor[i].gameObject.name + " is NULL!");
-            //        }
-
-            //    }
-            //}
-
-        }
+        
 
         public void SendDebugSignal()
         {

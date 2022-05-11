@@ -24,21 +24,15 @@ namespace BH
         void Awake()
         {
             lineRenderer = GetComponent<LineRenderer>();
-            //boxCollider = GetComponent<BoxCollider>();
+            boxCollider = GetComponent<BoxCollider>();
         }
 
         public Pin NodeInputPin 
         {
             get
             {
-                if (startPin.pinType == Pin.PinType.NodeInput)
-                {
-                    return startPin;
-                }
-                else
-                {
-                    return endPin;
-                }
+                if (startPin.pinType == Pin.PinType.NodeInput) return startPin;
+                else return endPin;
             }
         }
 
@@ -46,14 +40,9 @@ namespace BH
         {
             get
             {
-                if (startPin.pinType == Pin.PinType.NodeOutput)
-                {
-                    return startPin;
-                }
-                else
-                {
-                    return endPin;
-                }
+                if (startPin.pinType == Pin.PinType.NodeOutput) return startPin;
+                else return endPin;
+                
             }
         }
 
@@ -80,11 +69,6 @@ namespace BH
             startPin = m_startPin;
         }
 
-        public void ConnectToFirstPinWithWire(Pin m_startPin)
-        {
-            startPin = m_startPin;
-        }
-
         public void Place(Pin m_endPin)
         {
             endPin = m_endPin;
@@ -98,36 +82,19 @@ namespace BH
             lineRenderer.SetPosition(lineRenderer.positionCount - 1, m_endPinPos);
         }
 
-        public void UpdateColliderPosition(Vector3 m_startPos, Vector3 m_endPos)
+        public void UpdateColliderPosition(Vector3 startPos, Vector3 endPos)
         {
             if (boxCollider != null)
             {
                 if (wireConnected)
                 {
-                    //boxCollider.transform.parent = lineRenderer.transform;
+                    boxCollider.transform.position = lineRenderer.transform.position;
 
-                    //float lineLength = Vector3.Distance(m_startPos, m_endPos);
-                    //boxCollider.size = new Vector3(lineLength, 0.5f, 0.1f);
+                    boxCollider.transform.position = startPos + (endPos - startPos) / 2;
+                    boxCollider.transform.LookAt(startPos);
 
-                    //Vector3 colDirection = m_startPos - m_endPos;
-
-                    //Vector3 midPoint = (m_startPos + m_endPos) / 2;
-                    //midPoint = new Vector3(midPoint.x - 1f, midPoint.y, midPoint.z);
-
-                    //Quaternion rotationTarget = Quaternion.LookRotation(-colDirection);
-
-                    //boxCollider.transform.position = midPoint;
-                    //boxCollider.transform.rotation = rotationTarget;
-
-                    //colAngle = (Mathf.Abs(m_startPos.y - m_endPos.y) / Mathf.Abs(m_startPos.x - m_endPos.x));
-                    //colAngle = Mathf.Rad2Deg * Mathf.Atan(colAngle);
-
-
-
-                    //if (boxCollider.transform.rotation.z != colAngle)
-                    //{
-                    //    boxCollider.transform.rotation = Quaternion.AngleAxis(colAngle, Vector3.forward);
-                    //}
+                    float wireDistance = (endPos - startPos).magnitude;
+                    boxCollider.size = new Vector3(0.0f, 0.2f, wireDistance);
                 }
             }
         }

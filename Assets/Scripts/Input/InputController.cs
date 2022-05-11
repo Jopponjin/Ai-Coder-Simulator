@@ -49,12 +49,10 @@ namespace BH
         [SerializeField]
         private bool interacting;
 
-        private void Start()
+        private void Awake()
         {
-            //foreach (var item in keybinData.PlayerKeyBindsList)
-            //{
-            //    currentKeyBinds.Add(item.Key);
-            //}
+            pinAndWireHandler = GetComponent<PinAndWireHandler>();
+            nodeInteraction = GetComponent<NodeInteraction>();
         }
 
         // Update is called once per frame
@@ -189,8 +187,6 @@ namespace BH
             {
                 if (interactionData.InteractableOne.IsInteractble && !interactionData.InteractableOne.HoldInteract)
                 {
-                    //Debug.Log("[ApplyInteractionLogic]: Calling 'OnInteract' on object in data.");
-
                     interactionData.OnInteract(gameObject, mouseWorldPosition);
                 }
 
@@ -218,11 +214,11 @@ namespace BH
 
                         //Debug.Log("[INTERACTION]: Deleted node wires");
                     }
-                    //if (clickedInteractedObject.tag == "Wire")
-                    //{
-                    //    pinAndWireHandler.DeleteWireAndConnections(clickedInteractedObject.GetComponent<Wire>());
-                    //    clickedInteractedObject = null;
-                    //}
+                    else if (clickedInteractedObject.tag == "Wire")
+                    {
+                        pinAndWireHandler.DestroyWire(clickedInteractedObject.GetComponent<Wire>());
+                        clickedInteractedObject = null;
+                    }
                 }
             }
         }

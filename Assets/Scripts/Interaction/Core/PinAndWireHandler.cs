@@ -41,7 +41,6 @@ namespace BH
 				wireToPlace = Instantiate(wirePrefab, Vector3.zero, gameObject.transform.rotation);
 
 				wireToPlace.ConnectToFirstPin(wireStartPin);
-				wireToPlace.ConnectToFirstPinWithWire(wireStartPin);
 				wireToPlace.UpdateWirePositions(m_startPin.transform.position, m_endPin.transform.position);
 				wireToPlace.Place(m_endPin);
 
@@ -49,7 +48,6 @@ namespace BH
 				allWires.Add(wireToPlace);
 				wiresByNodeInputPin.Add(nodeInputPin, wireToPlace);
 
-				//wireStartPin = null;
 				wireToPlace = null;
 			}
 			else
@@ -95,9 +93,11 @@ namespace BH
 			return null;
         }
 
-		void DestroyWire(Wire m_wire)
+		public void DestroyWire(Wire m_wire)
         {
+			//m_wire.wireConnected = false;
 			wiresByNodeInputPin.Remove(m_wire.NodeInputPin);
+
 			allWires.Remove(m_wire);
 			Pin.RemoveConnection(m_wire.startPin, m_wire.endPin);
 			Destroy(m_wire.gameObject);

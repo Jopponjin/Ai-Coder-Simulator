@@ -34,7 +34,7 @@ namespace BH
             }
             else
             {
-                Debug.Log("[UIContentTab]: List Is EWMPTY!");
+                Debug.Log("[UIContentTab]: List is empty!");
             }
         }
     }
