@@ -17,13 +17,7 @@ namespace BH
 
         [SerializeField]
         bool isDebugMode;
-
         
-
-        public void SendDebugSignal()
-        {
-            
-        }
 
         public void CreateNode(string nodeName)
         {

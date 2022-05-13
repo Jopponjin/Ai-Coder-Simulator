@@ -10,6 +10,9 @@ namespace BH
     {
         [Header("Data")]
         [SerializeField]
+        EditorInput editorInput;
+
+        [SerializeField]
         InteractionData interactionData;
 
         [SerializeField]
@@ -29,9 +32,6 @@ namespace BH
         [SerializeField]
         private LayerMask interactableLayer = 0;
 
-        [SerializeField]
-        List<string> currentKeyBinds;
-
         [Space]
         [Header("Debug")]
         [SerializeField]
@@ -44,6 +44,10 @@ namespace BH
         private GameObject currentOnFocusObject;
 
         [SerializeField]
+        List<BaseNode> selectedObjects = new List<BaseNode>();
+
+        [Space]
+        [SerializeField]
         Vector3 mouseWorldPosition;
 
         [SerializeField]
@@ -51,6 +55,7 @@ namespace BH
 
         private void Awake()
         {
+            editorInput = GetComponent<EditorInput>();
             pinAndWireHandler = GetComponent<PinAndWireHandler>();
             nodeInteraction = GetComponent<NodeInteraction>();
         }
@@ -202,7 +207,13 @@ namespace BH
 
         void KeyboardBindInteraction()
         {
-            if (Input.GetKeyDown(KeyCode.Delete))
+            if (editorInput.undoAction.WasPressedThisFrame())
+            {
+                Debug.Log("InputController.cs: Undo called!");
+            }
+
+
+            if (editorInput.deleteAction.WasPressedThisFrame())
             {
                 if (clickedInteractedObject != null)
                 {
@@ -221,6 +232,7 @@ namespace BH
                     }
                 }
             }
+            
         }
 
         RaycastHit GetMouseRayHit()

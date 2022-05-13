@@ -10,6 +10,7 @@ namespace BH
 		public Transform wireHolder;
 		public Wire wirePrefab;
 
+		GameObject editor;
 		[SerializeField]
 		Pin wireStartPin;
 		[SerializeField]
@@ -23,6 +24,7 @@ namespace BH
 
 		private void Awake()
         {
+			editor = GameObject.Find("Editor");
 			allWires = new List<Wire>();
 			wiresByNodeInputPin = new Dictionary<Pin, Wire>();
 		}
@@ -38,7 +40,7 @@ namespace BH
 				RemoveConflictWire(nodeInputPin);
 
 				wireStartPin = m_startPin;
-				wireToPlace = Instantiate(wirePrefab, Vector3.zero, gameObject.transform.rotation);
+				wireToPlace = Instantiate(wirePrefab, Vector3.zero, gameObject.transform.rotation, parent: editor.transform);
 
 				wireToPlace.ConnectToFirstPin(wireStartPin);
 				wireToPlace.UpdateWirePositions(m_startPin.transform.position, m_endPin.transform.position);

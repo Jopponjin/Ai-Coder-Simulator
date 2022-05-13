@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -65.28, y: -380}
+  m_AnchoredPosition: {x: -65.28, y: -365}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &13965604
@@ -1389,7 +1389,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
+  m_BackGroundColor: {r: 0.31764707, g: 0.31764707, b: 0.31764707, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2048,6 +2048,7 @@ GameObject:
   - component: {fileID: 389340998}
   - component: {fileID: 389340997}
   - component: {fileID: 389340996}
+  - component: {fileID: 389341001}
   m_Layer: 0
   m_Name: '[ Core Node Editor]'
   m_TagString: Untagged
@@ -2098,7 +2099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f47ce8b1319e245b00dd1c6dd40c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pinAndWireHandler: {fileID: 0}
+  pinAndWireHandler: {fileID: 389340997}
   mainCamera: {fileID: 239934879}
   currentInteractionObject: {fileID: 0}
   pin1: {fileID: 0}
@@ -2118,6 +2119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5879e987c70b694893728a1f890aeeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  editorInput: {fileID: 389341001}
   interactionData: {fileID: 11400000, guid: 6695820fe693b6c4491563767f35d8a7, type: 2}
   keybinData: {fileID: 11400000, guid: f14c4f06924dca547a020b9d2358a193, type: 2}
   pinAndWireHandler: {fileID: 0}
@@ -2126,10 +2128,10 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 1024
-  currentKeyBinds: []
   currentInteractingObject: {fileID: 0}
   clickedInteractedObject: {fileID: 0}
   currentOnFocusObject: {fileID: 0}
+  selectedObjects: []
   mouseWorldPosition: {x: 0, y: 0, z: 0}
   interacting: 0
 --- !u!4 &389341000
@@ -2147,6 +2149,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &389341001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389340995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519c2f2b8863044489de59c0bf766181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSelectAction:
+    m_Name: Mouse Select
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9167d462-2a4e-4b37-8c5e-d23044b3a599
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  deleteAction:
+    m_Name: Delete
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 315938e0-e65f-4d9a-bdbf-17897f32d909
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  gridSnapAction:
+    m_Name: Grid Snap
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8c644247-d848-48f6-afe6-6315734fe75e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  undoAction:
+    m_Name: Undo
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6ccfc59e-5a19-4242-9ad4-0bdc197a42d6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  undoTriggerd: 0
 --- !u!1 &391502824
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,7 +4126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -800, y: 430}
+  m_AnchoredPosition: {x: -772, y: 430}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &718834499
@@ -4255,7 +4306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -600, y: 430}
+  m_AnchoredPosition: {x: -572, y: 430}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763283968
@@ -4908,7 +4959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -397.00012, y: 355}
+  m_AnchoredPosition: {x: -369.00015, y: 355}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832995742
@@ -6271,7 +6322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -397, y: 430}
+  m_AnchoredPosition: {x: -369, y: 430}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077170695
@@ -7666,7 +7717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -800, y: 355.65}
+  m_AnchoredPosition: {x: -772, y: 355.65}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289541500

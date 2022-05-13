@@ -141,13 +141,13 @@ public class CameraControllerEditor : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(2))
             {
-                mouseDragStart = new Vector3(-Input.mousePosition.x, -Input.mousePosition.y, transform.position.z);
+                mouseDragStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
                 mouseDragStart = Camera.main.ScreenToWorldPoint(mouseDragStart);
                 mouseDragStart.z = transform.position.z;
             }
             if (Input.GetMouseButton(2))
             {
-                Vector3 mouseDragDir = new Vector3(-Input.mousePosition.x, -Input.mousePosition.y, transform.position.z);
+                Vector3 mouseDragDir = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
                 mouseDragDir = Camera.main.ScreenToWorldPoint(mouseDragDir);
                 mouseDragDir.z = transform.position.z;
                 transform.position = transform.position - (mouseDragDir - mouseDragStart);
