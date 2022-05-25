@@ -139,6 +139,8 @@ public class CameraControllerEditor : MonoBehaviour
     {
         if (cameraState == CameraState.Editor)
         {
+            if (!Camera.main.orthographic) Camera.main.orthographic = true;
+
             if (Input.GetMouseButtonDown(2))
             {
                 mouseDragStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
@@ -157,6 +159,8 @@ public class CameraControllerEditor : MonoBehaviour
 
     void FreeCameraMovement()
     {
+        if(Camera.main.orthographic) Camera.main.orthographic = false;
+
         if (Input.GetMouseButtonDown(1))
         {
             Cursor.visible = false;
@@ -258,36 +262,7 @@ public class CameraControllerEditor : MonoBehaviour
         }
     }
 
-    #region State Functions
-
-    
-
-    #endregion
-
     #region Local Methods
-    RaycastHit GetMouseRayHit()
-    {
-        RaycastHit m_hit;
-        Ray m_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(m_ray, out m_hit))
-        {
-            Debug.Log("[RAYCAST]: Hit gameobject: " + m_hit.transform.name);
-            return m_hit;
-        }
-        return m_hit;
-    }
-
-    Vector3 GetWorldMousePostionDown()
-    {
-        RaycastHit m_hit;
-        Ray m_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(m_ray, out m_hit))
-        {
-            Debug.Log("[RAYCAST]: Hit point" + m_hit.point);
-            return m_hit.point;
-        }
-        return Vector3.zero;
-    }
 
     private static float ClampAngle(float angle, float min, float max)
     {

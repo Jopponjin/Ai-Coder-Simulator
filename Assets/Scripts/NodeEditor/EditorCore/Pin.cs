@@ -13,10 +13,8 @@ namespace BH
 
         // The pin from which this pin receives its input signal.
         public Pin parentPin;
-
         // The pins which this pin forwards its signal to.
         [HideInInspector] public List<Pin> childPins = new List<Pin>();
-
         //Current state of pin, 0 = off, 1 = on?
         [SerializeField] int currentState;
 
@@ -29,6 +27,9 @@ namespace BH
                 return parentPin != null | pinType == PinType.NodeOutput;
             }
         }
+
+        [Header("Debug")]
+        public bool isDirty = false;
 
         public void ReceivePinSignal(int signal, GameObject senderObject)
         {

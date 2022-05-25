@@ -2054,7 +2054,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &389340996
 MonoBehaviour:
@@ -2133,7 +2133,8 @@ MonoBehaviour:
   currentOnFocusObject: {fileID: 0}
   selectedObjects: []
   mouseWorldPosition: {x: 0, y: 0, z: 0}
-  interacting: 0
+  holdInteracting: 0
+  clickInteracting: 0
 --- !u!4 &389341000
 Transform:
   m_ObjectHideFlags: 0
@@ -2142,12 +2143,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389340995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.74222505, y: -0.21187343, z: 5.662804}
+  m_LocalPosition: {x: 0, y: -0.21108735, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &389341001
 MonoBehaviour:
@@ -2179,6 +2180,15 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  multiSelectAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   gridSnapAction:
     m_Name: Grid Snap
     m_Type: 0
@@ -2193,6 +2203,15 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 6ccfc59e-5a19-4242-9ad4-0bdc197a42d6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  redoAction:
+    m_Name: Redo
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 60a268d0-3bd4-49f1-bafb-d5684ce1c24a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -2891,7 +2910,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &558434420
 MonoBehaviour:
@@ -5141,7 +5160,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &879493319
 GameObject:
@@ -6842,7 +6861,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1148618229
 MonoBehaviour:
@@ -7862,7 +7881,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1290772541
 MonoBehaviour:
@@ -10041,7 +10060,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847796111
 GameObject:

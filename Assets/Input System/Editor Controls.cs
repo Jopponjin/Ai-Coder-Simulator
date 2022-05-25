@@ -71,20 +71,18 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Redo"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""a7c2e218-3352-4d34-901c-6ba86f87f100"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""e75e63b3-f149-4b87-b1a9-8ec8b2ebf7e2"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Multi Select"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""c55c1714-e9a4-4372-80ad-ec3b604daf80"",
@@ -117,6 +115,39 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
                     ""action"": ""Mouse Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""46cd32ff-34ba-4999-b7c2-522926f87a07"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Multi Select"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""259d2d1b-ea80-4d49-89d4-c5238ef0fafa"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Multi Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""eeda267b-fae3-40a8-9392-b4a58e4f0029"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Multi Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -130,6 +161,7 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
         m_Editor_GridSnap = m_Editor.FindAction("Grid Snap", throwIfNotFound: true);
         m_Editor_MouseSelect = m_Editor.FindAction("Mouse Select", throwIfNotFound: true);
         m_Editor_Undo = m_Editor.FindAction("Undo", throwIfNotFound: true);
+        m_Editor_Redo = m_Editor.FindAction("Redo", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -194,6 +226,7 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Editor_GridSnap;
     private readonly InputAction m_Editor_MouseSelect;
     private readonly InputAction m_Editor_Undo;
+    private readonly InputAction m_Editor_Redo;
     public struct EditorActions
     {
         private @EditorControls m_Wrapper;
@@ -203,6 +236,7 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
         public InputAction @GridSnap => m_Wrapper.m_Editor_GridSnap;
         public InputAction @MouseSelect => m_Wrapper.m_Editor_MouseSelect;
         public InputAction @Undo => m_Wrapper.m_Editor_Undo;
+        public InputAction @Redo => m_Wrapper.m_Editor_Redo;
         public InputActionMap Get() { return m_Wrapper.m_Editor; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -227,6 +261,9 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
                 @Undo.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnUndo;
                 @Undo.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnUndo;
                 @Undo.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnUndo;
+                @Redo.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnRedo;
+                @Redo.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnRedo;
+                @Redo.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnRedo;
             }
             m_Wrapper.m_EditorActionsCallbackInterface = instance;
             if (instance != null)
@@ -246,6 +283,9 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
                 @Undo.started += instance.OnUndo;
                 @Undo.performed += instance.OnUndo;
                 @Undo.canceled += instance.OnUndo;
+                @Redo.started += instance.OnRedo;
+                @Redo.performed += instance.OnRedo;
+                @Redo.canceled += instance.OnRedo;
             }
         }
     }
@@ -257,5 +297,6 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
         void OnGridSnap(InputAction.CallbackContext context);
         void OnMouseSelect(InputAction.CallbackContext context);
         void OnUndo(InputAction.CallbackContext context);
+        void OnRedo(InputAction.CallbackContext context);
     }
 }

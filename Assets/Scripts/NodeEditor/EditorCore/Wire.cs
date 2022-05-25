@@ -21,6 +21,9 @@ namespace BH
         [SerializeField]
         float colAngle;
 
+        [Header("Debug")]
+        public bool isDirty = false;
+
         void Awake()
         {
             lineRenderer = GetComponent<LineRenderer>();

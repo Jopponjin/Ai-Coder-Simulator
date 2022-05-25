@@ -9,6 +9,7 @@ namespace BH
         [Header("Debug")]
         public string nodeName;
         public int currentState;
+        public bool isDirty = false;
 
         public enum NodeUiState
         {

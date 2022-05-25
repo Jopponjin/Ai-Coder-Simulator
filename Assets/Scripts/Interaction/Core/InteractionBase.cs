@@ -6,6 +6,8 @@ namespace BH
 {
     public class InteractionBase : MonoBehaviour, IInteractbleInterface
     {
+        public Vector3 startPosition = Vector3.zero;
+
         [Header("Interaction Settings")]
         public bool isInteractble = true;
         public bool holdInteract;
@@ -22,11 +24,11 @@ namespace BH
         {
         }
 
-        public virtual void OnHold(GameObject interactingAgent, Vector2 newPosition)
+        public virtual void OnHold(GameObject interactingAgent, Vector3 newPosition)
         {
         }
 
-        public virtual void OnInteract(GameObject interactingAgent, Vector2 newPosition)
+        public virtual void OnInteract(GameObject interactingAgent, Vector3 clickPosition)
         {
         }
 

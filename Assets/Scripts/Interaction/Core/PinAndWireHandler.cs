@@ -33,8 +33,6 @@ namespace BH
         {
 			if (Pin.IsValidConnection(m_startPin, m_endPin))
 			{
-				//Debug.Log("[PIN-WIRE]:'IsValidConnection()' returned TRUE!");
-
 				Pin nodeInputPin = (m_startPin.pinType == Pin.PinType.NodeInput) ? m_startPin : m_endPin;
 
 				RemoveConflictWire(nodeInputPin);
@@ -58,7 +56,7 @@ namespace BH
 			}
 		}
 
-		public void DeleteNodeWires(Node m_node)
+		public void DeleteNodesWires(Node m_node)
         {
 			List<Wire> wiresToDestroy = new List<Wire>();
 			Debug.Log("[PIN&WIRE]: Called deleteNodeWires on: " + m_node.transform.gameObject.name);

@@ -23,7 +23,7 @@ namespace BH.Data
         }
 
 
-		public void OnInteract(GameObject gameObject, Vector2 newPosition)
+		public void OnInteract(GameObject gameObject, Vector3 newPosition)
 		{
 			interactbleOne.OnInteract(gameObject, newPosition);
 		}

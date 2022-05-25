@@ -7,10 +7,18 @@ namespace BH
     public class NodeInteraction : InteractionBase
     {
 
-        public override void OnHold(GameObject interactingAgent, Vector2 newPosition)
+        public override void OnInteract(GameObject interactingAgent, Vector3 newPosition)
         {
-            base.OnHold(interactingAgent, newPosition);
-            gameObject.transform.position = newPosition;
+            startPosition = gameObject.transform.position - newPosition;
+        }
+
+        public override void OnHold(GameObject interactingAgent, Vector3 newPosition)
+        {
+
+            
+            Vector3 offsetNormlized = startPosition.normalized;
+
+            transform.position = newPosition - offsetNormlized; 
         }
 
         public void SpawnNode(Node m_nodePrefab)

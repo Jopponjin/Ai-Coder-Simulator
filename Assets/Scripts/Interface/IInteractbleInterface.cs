@@ -14,9 +14,9 @@ namespace BH
 
         void OffFocus(GameObject interactingAgent);
 
-        void OnInteract(GameObject interactingAgent, Vector2 newPosition);
+        void OnInteract(GameObject interactingAgent, Vector3 newVector);
 
-        void OnHold(GameObject interactingAgent, Vector2 newPosition);
+        void OnHold(GameObject interactingAgent, Vector3 newPosition);
 
         void OnRelease(GameObject interactingAgent);
     }

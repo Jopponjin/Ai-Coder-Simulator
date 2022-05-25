@@ -12,8 +12,10 @@ namespace BH
         
         public InputAction mouseSelectAction;
         public InputAction deleteAction;
+        public InputAction multiSelectAction;
         public InputAction gridSnapAction;
         public InputAction undoAction;
+        public InputAction redoAction;
 
         public bool undoTriggerd = false;
 
@@ -27,8 +29,17 @@ namespace BH
             deleteAction = inputActions.Editor.Delete;
             deleteAction.Enable();
 
+            multiSelectAction = inputActions.Editor.MultiSelect;
+            multiSelectAction.Enable();
+
             gridSnapAction = inputActions.Editor.GridSnap;
             gridSnapAction.Enable();
+
+            redoAction = inputActions.Editor.Redo;
+            redoAction.AddCompositeBinding("ButtonWithOneModifier")
+                .With("Button", "<Keyboard>/leftCtrl")
+                .With("Modifier", "<Keyboard>/x");
+            redoAction.Enable();
 
             undoAction = inputActions.Editor.Undo;
             undoAction.AddCompositeBinding("ButtonWithOneModifier")
@@ -43,14 +54,7 @@ namespace BH
             deleteAction.Disable();
             gridSnapAction.Disable();
             undoAction.Disable();
-        }
-
-        void UndoAction()
-        {
-            if (undoAction.triggered)
-            {
-
-            }
+            redoAction.Disable();
         }
         
     }
