@@ -11,9 +11,12 @@ namespace BH
         public EditorControls inputActions;
         
         public InputAction mouseSelectAction;
+        public InputAction mouseHoldAction;
+
         public InputAction deleteAction;
         public InputAction multiSelectAction;
         public InputAction gridSnapAction;
+
         public InputAction undoAction;
         public InputAction redoAction;
 

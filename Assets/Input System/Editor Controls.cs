@@ -117,6 +117,17 @@ public partial class @EditorControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""22af92cf-3095-4cd2-a057-cfc4b922b9af"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""One Modifier"",
                     ""id"": ""46cd32ff-34ba-4999-b7c2-522926f87a07"",
                     ""path"": ""OneModifier"",

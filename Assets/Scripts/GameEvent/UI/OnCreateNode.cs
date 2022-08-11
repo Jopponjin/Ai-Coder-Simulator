@@ -8,13 +8,11 @@ namespace BH
     public class OnCreateNode : MonoBehaviour
     {
         UiHandler uiHandler;
-
-        string buttonNodeType;
+        public string prefabName = "";
 
         private void OnEnable()
         {
             uiHandler = gameObject.GetComponentInParent<UiHandler>();
-            buttonNodeType = gameObject.name;
         }
 
         public void NodeButtonPressed()

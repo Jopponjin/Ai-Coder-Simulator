@@ -21,12 +21,6 @@ namespace BH
             transform.position = newPosition - offsetNormlized; 
         }
 
-        public void SpawnNode(Node m_nodePrefab)
-        {
-            var newNode = Instantiate(m_nodePrefab, gameObject.transform);
-            newNode.gameObject.SetActive(true);
-        }
-
         public void DeleteNode(GameObject m_node)
         {
             Destroy(m_node);

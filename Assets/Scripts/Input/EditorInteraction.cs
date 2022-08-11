@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using BH.Data;
 using BH;
+using UnityEngine.EventSystems;
 
 namespace BH
 {
@@ -48,6 +50,9 @@ namespace BH
         public List<GameObject> selectedObjects = new List<GameObject>();
         List<EditorScene> editorHistory = new List<EditorScene>();
 
+        //Create a list of Raycast Results
+        
+
         [Space]
         [SerializeField]
         Vector3 mouseWorldPosition;
@@ -56,6 +61,12 @@ namespace BH
         private bool holdInteracting;
         [SerializeField]
         private bool clickInteracting;
+
+        [SerializeField] GraphicRaycaster Raycaster;
+        PointerEventData pointerEventData;
+
+        [SerializeField] EventSystem eventSystem;
+        [SerializeField] RectTransform canvasRect;
 
         private void Awake()
         {
@@ -67,7 +78,6 @@ namespace BH
         // Update is called once per frame
         void Update()
         {
-            mouseWorldPosition = GetWorldMousePostionDown();
             MouseInteractionLogic();
             KeyboardBindInteraction();
         }
@@ -77,16 +87,15 @@ namespace BH
         
         private void MouseInteractionLogic()
         {
-            RaycastHit hitFocus;
-            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hitFocus))
+            if (RaycastUtilities.PointerIsOverUI(Input.mousePosition))
             {
+                Debug.Log("EditorInteraction.cs: Hitting an object");
+                GameObject tempGameobject = RaycastUtilities.UIRaycast(RaycastUtilities.ScreenPosToPointerData(Input.mousePosition));
                 // Apply focused object
-                if (hitFocus.transform.gameObject != null)
+                if (tempGameobject.layer == 10)
                 {
-                    if (hitFocus.transform.gameObject.layer == 10)
-                    {
-                        currentOnFocusObject = hitFocus.transform.gameObject;
-                    }
+                    currentOnFocusObject = tempGameobject;
+                    Debug.Log("EditorInteraction.cs: Hitting " + currentOnFocusObject);
                 }
             }
             else
@@ -95,19 +104,19 @@ namespace BH
             }
             
 
-            if (Input.GetMouseButtonDown(0))
+            if (editorInput.mouseHoldAction.IsPressed())
             {
                 interactionData.InteractedClicked = true;
 
                 //Aplly clicked object
-                if (hitFocus.collider)
+                if (clickInteracting)
                 {
-                    if (hitFocus.transform.gameObject.CompareTag("Node"))
+                    if (currentOnFocusObject.gameObject.CompareTag("Node"))
                     {
-                        if (editorInput.multiSelectAction.WasPressedThisFrame() && !ObjectNotInList(hitFocus.transform.gameObject))
+                        if (editorInput.multiSelectAction.WasPressedThisFrame() && !ObjectNotInList(currentOnFocusObject.gameObject))
                         {
                             //Multi select
-                            selectedObjects.Add(hitFocus.transform.gameObject);
+                            selectedObjects.Add(currentOnFocusObject.gameObject);
                             clickInteracting = true;
 
                             CheckInteraction();
@@ -116,7 +125,7 @@ namespace BH
                         {
                             //Singel select
                             selectedObjects.Clear();
-                            selectedObjects.Add(hitFocus.transform.gameObject);
+                            selectedObjects.Add(currentOnFocusObject.gameObject);
                             clickInteracting = true;
 
                             CheckInteraction();
@@ -124,12 +133,12 @@ namespace BH
 
                     }
 
-                    if (hitFocus.transform.gameObject.CompareTag("Wire"))
+                    if (currentOnFocusObject.gameObject.CompareTag("Wire"))
                     {
-                        if (editorInput.multiSelectAction.WasPressedThisFrame() && !ObjectNotInList(hitFocus.transform.gameObject))
+                        if (editorInput.multiSelectAction.WasPressedThisFrame() && !ObjectNotInList(currentOnFocusObject.gameObject))
                         {
                             //Multi select
-                            selectedObjects.Add(hitFocus.transform.gameObject);
+                            selectedObjects.Add(currentOnFocusObject.gameObject);
                             clickInteracting = true;
 
                             CheckInteraction();
@@ -138,7 +147,7 @@ namespace BH
                         {
                             //Singel select
                             selectedObjects.Clear();
-                            selectedObjects.Add(hitFocus.transform.gameObject);
+                            selectedObjects.Add(currentOnFocusObject.gameObject);
                             clickInteracting = true;
 
                             CheckInteraction();
@@ -157,14 +166,14 @@ namespace BH
             }
 
 
-            if (Input.GetMouseButton(0))
+            if (editorInput.mouseSelectAction.WasPressedThisFrame())
             {
                 interactionData.InteractedClicked = true;
 
                 clickInteracting = false;
 
                 //Apply current object
-                if (currentInteractingObject.CompareTag("Node"))
+                if (clickInteracting && currentOnFocusObject.gameObject.CompareTag("Node"))
                 {
                     //Dont need to add to list as we do that on click.
                     holdInteracting = true;
@@ -182,8 +191,6 @@ namespace BH
                 clickInteracting = false;
             }
         }
-
-
 
         void CheckInteraction()
         {
@@ -209,11 +216,6 @@ namespace BH
                 interactionBase.OnHold(gameObject, mouseWorldPosition);
             }
             
-        }
-
-        void RestInteraction()
-        {
-            selectedObjects.Clear();
         }
 
         void OldApplyInteractionLogic()
@@ -252,7 +254,7 @@ namespace BH
             }
             if (editorInput.redoAction.WasPressedThisFrame())
             {
-                Debug.Log("InputController.cs: Redo§§ called!");
+                Debug.Log("InputController.cs: Redo called!");
             }
 
 
@@ -307,21 +309,6 @@ namespace BH
 
         }
 
-        Vector3 GetWorldMousePostionDown()
-        {
-            Plane plane = new Plane(Vector3.back, 0f);
-            float m_Distance;
-
-            Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (plane.Raycast(mouseRay, out m_Distance))
-            {
-                Vector3 m_newMouseValue = mouseRay.GetPoint(m_Distance);
-                return m_newMouseValue;
-            }
-            return Vector3.zero;
-        }
-
 
     }
 }
@@ -333,4 +320,25 @@ public class EditorScene
     public Wire[] wires = new Wire[100];
 
 
+}
+
+
+public static class RaycastUtilities
+{
+    public static bool PointerIsOverUI(Vector2 screenPos)
+    {
+        var hitObject = UIRaycast(ScreenPosToPointerData(screenPos));
+        return hitObject != null && hitObject.layer == LayerMask.NameToLayer("UI");
+    }
+
+    public static GameObject UIRaycast(PointerEventData pointerData)
+    {
+        var results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        return results.Count < 1 ? null : results[0].gameObject;
+    }
+
+    public static PointerEventData ScreenPosToPointerData(Vector2 screenPos)
+       => new(EventSystem.current) { position = screenPos };
 }

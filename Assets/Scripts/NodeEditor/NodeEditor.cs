@@ -9,24 +9,30 @@ namespace BH
     {
         public NodeDataPack nodeDataPack;
         public List<GameObject> allNodesInEditor;
+        [Space]
+        public Transform nodeSpawnParent;
 
-        Timer timer;
         [Header("Debug")]
         [SerializeField]
         bool isLoopingSignal;
 
         [SerializeField]
         bool isDebugMode;
-        
+
+        private void Awake()
+        {
+            if (!nodeSpawnParent) nodeSpawnParent = transform.parent;
+        }
 
         public void CreateNode(string nodeName)
         {
             for (int i = 0; i < allNodesInEditor.Count; i++)
             {
-                if (allNodesInEditor[i].gameObject.name == nodeName)
+                if (allNodesInEditor[i].GetComponent<BaseNode>().name == nodeName)
                 {
-                    Instantiate(allNodesInEditor[i], transform.root);
-                    Debug.Log("[EVENTSYS]: Created " + allNodesInEditor[i].gameObject.name +" node!");
+                     GameObject spawnedNode = Instantiate(allNodesInEditor[i], nodeSpawnParent);
+                    spawnedNode.transform.position = new Vector3(nodeSpawnParent.position.x, nodeSpawnParent.position.y, nodeSpawnParent.position.z + -0.1f);
+                    //Debug.Log("[EVENTSYS]: Created " + allNodesInEditor[i].gameObject.name +" node!");
                 }
             }
         }

@@ -8,7 +8,6 @@ namespace BH
     {
         public override void ProcessOutput(GameObject m_shipRefrance)
         {
-            
             int outputSignal = inputPins[0].State & inputPins[1].State;
 
             if (outputSignal > 1)

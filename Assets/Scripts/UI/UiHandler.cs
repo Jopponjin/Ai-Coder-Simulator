@@ -32,7 +32,7 @@ namespace BH
 
         public void AddNodeToEditorSpace(GameObject m_nodeGameObject)
         {
-            nodeEditor.CreateNode(m_nodeGameObject.name);
+            nodeEditor.CreateNode(m_nodeGameObject.GetComponent<OnCreateNode>().prefabName);
         }
 
         public void OnPointerClick(PointerEventData eventData)

@@ -7,7 +7,7 @@ namespace BH
     public class BaseNode : Node
     {
         [Header("Debug")]
-        public string nodeName;
+        public string nodeName = "";
         public int currentState;
         public bool isDirty = false;
 

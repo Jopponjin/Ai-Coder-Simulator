@@ -1,0 +1,1681 @@
+Using pre-set license
+Built from '2022.1/staging' branch; Version is '2022.1.2f1 (9427c1534183) revision 9709505'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit IoTEnterpriseS' Language: 'en' Physical Memory: 32677 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.1.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker12
+-projectPath
+D:/Unity projects/Ai-Coder-Simulator
+-logFile
+Logs/AssetImportWorker12.log
+-srvPort
+49941
+Successfully changed project path to: D:/Unity projects/Ai-Coder-Simulator
+D:/Unity projects/Ai-Coder-Simulator
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 52.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.2f1 (9427c1534183)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.1.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity projects/Ai-Coder-Simulator/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon VII (ID=0x66af)
+    Vendor:   ATI
+    VRAM:     16311 MB
+    Driver:   31.0.12015.1008
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.1.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.1.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.1.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003487 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.438 seconds
+Domain Reload Profiling:
+	ReloadAssembly (438ms)
+		BeginReloadAssembly (54ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (307ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (72ms)
+				TypeCache.Initialize (72ms)
+					TypeCache.ScanAssembly (71ms)
+				ResolveRequiredComponents (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (178ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (42ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (95ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003871 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 40.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.836 seconds
+Domain Reload Profiling:
+	ReloadAssembly (837ms)
+		BeginReloadAssembly (79ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (679ms)
+			LoadAssemblies (57ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (167ms)
+				TypeCache.Initialize (159ms)
+					TypeCache.ScanAssembly (156ms)
+				ResolveRequiredComponents (8ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (383ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (4ms)
+				RefreshPlugins (41ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (214ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4019 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (348.9 KB). Loaded Objects now: 4484.
+Memory consumption went from 0.65 GB to 0.65 GB.
+Total: 2.967200 ms (FindLiveObjects: 0.230600 ms CreateObjectMapping: 0.159100 ms MarkObjects: 2.470000 ms  DeleteObjects: 0.106700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 33195.408246 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70a4bc7ebff8226eb0f930cf861d166b') in 0.224328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.086303 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '427b3560fccd6a764fff983ac494bb1d') in 0.028345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.886607 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2895dd8a4b02c06f2cb005c9ac87453b') in 0.031555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.410730 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e7c6fda8f34594c71cc6a1d26e164d') in 0.027612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.182930 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0277a561cbf5a7e6540f1a8e60ceb362') in 0.026994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.456217 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a95976a9f4cd01293ad5d58aa677035d') in 0.025902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.202290 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9da24f7d80fb5e0bac23948de7d88f2') in 0.024138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.108700 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd91155cb51ce6a9ccbf20052206738') in 0.025323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.840997 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98773933c37ec12ca202fedf26dd7248') in 0.024971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.140174 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '000ad6f5dcc7545a151eeaaf6bdac524') in 0.024584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.309480 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faac6135d1d50a06edb4f53b93cfc72d') in 0.024439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.780823 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f3c7f7174c51b3cd6f6180b76f9888') in 0.026546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.258861 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac358afaf221e9b51071bc0e4224e71b') in 0.027935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.641207 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f6964cc80f3414ebd62e9900b50cff') in 0.025491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.774581 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e6e0d778767537b2778ce28005cefb') in 0.025175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.460718 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8029ce9965ec4f3dd73139462e048b4a') in 0.031248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.384435 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5462087ae43d2b1e7b3d79dc50c4ce') in 0.028774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.419507 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5adbe882ebd1cfeb8f5aecaecf4ae5a4') in 0.028116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.953670 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '102b0ffdc5f54c0dbc325450cd30536f') in 0.027538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.776426 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a4fe0ebb9901913802565beb48bed6') in 0.027546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.428310 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd9a92675f4c92d915b03c52b644f202') in 0.027036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.783978 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93ab69e78f3e1f6465a12eec0ca7dfb') in 0.026680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 859.185682 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2bfc5d1c1b6a21adfb7b27d1ebc3d0a') in 0.024181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.715085 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cda73c03b09d2f4df49dee2faa13549') in 0.024251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.637425 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94d9a81e8b4533193e07d911598f019e') in 0.028046 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.801006 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b858047206b4c62151714654310dbc0') in 0.031694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.983140 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb1d560740d96a171243608b74aff60f') in 0.022624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.149448 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba6db7ef19194db1eadb975e1544c3bb') in 0.025903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2648.795858 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f784eb7ffb8b5046bbe7d462a54f63a') in 0.032629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.096349 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a9e1aa52787d399cbcbbd970d377b15') in 0.026605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.049134 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464d68a74f4f0f324d3eb8d7865680f6') in 0.012146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.256717 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b435154726b2bdb86f6a35eabfb541b') in 0.082432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.210906 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a5d5445d2fbe43b45ed1d2e3a032e67') in 0.030448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 985.045874 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7ab6004f9322d417d8e635e3f63884') in 0.034965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.180982 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bab528b7b22f4c683df246f5012f9039') in 0.033133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.177886 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b203313056e255cd87f641d912abfc58') in 0.030867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.405404 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd0108a680f9f5708113cce493efd278') in 0.031182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.379178 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59393c32861f9997af5fc8a11434d387') in 0.034292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.579627 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2542667229ea19cbd4addde50434431f') in 0.032674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.391384 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95fce74dc1c1d3b852c28042b351eb18') in 0.033239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.209580 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63be767f4539c033f45f885b8a5a9700') in 0.030010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.388700 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dc4241dc4358a0f45075bd028bbf86a') in 0.033283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.648272 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0353e711469de9f46652fa33a9b51e52') in 0.032390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.987066 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '786dd512f3a6aefa7ffbacac4591960e') in 0.026831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.456969 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d61dc511b1434342f99be74e0f1e6b0') in 0.037114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.202147 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0001858a305f529f475507feff70a23b') in 0.036900 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.199618 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fce76b7fb315316ba8bb6e895f557357') in 0.037912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.183824 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8b8cfedcc6c884940974ccad28c10b8') in 0.037059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.601303 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a9b207f99563b1fcd51b788b4fa02a') in 0.036948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.499815 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b9b044b83e399efe6b7c73032e73e6') in 0.035855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.788213 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f06b438e4067ee640773f34e5adeb8c') in 0.033519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.021191 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e8bbf1b2fdf94a8b0fbe94a390f88bf') in 0.033770 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.074348 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '276293257f03d6ebf4c939c0c456391a') in 0.031279 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.483744 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c40d2fd73509baddac6130d1a00ee422') in 0.035913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.173629 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2b84d190b1c3488cc4c8d3365642eaf') in 0.036596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.298650 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec8d0aadfbe6bc4ec2552b36c193f99') in 0.039001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.653950 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6815589b4858d7a59763caa08c07ff21') in 0.029046 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.493692 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'def03fe920d79af3319aeea70c22e19d') in 0.037313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.258736 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2032933c8f127e3f258c062b6ad6209b') in 0.032269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.039257 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8aefd115259a4baf1319c5c907cc51a') in 0.031816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.386829 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba0b9a083c06ccdbce32d6f31975985a') in 0.033326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.398239 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfe9101ab49dde68d548a4f874372cb6') in 0.032642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.663445 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e477b40cfc99a24eec2b7bad73cec824') in 0.035613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.566747 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a975348ee90d5821f0621aee3d96a2') in 0.034795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.982521 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aa004398335f66168908a09305dd182') in 0.031956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.216269 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6899fad06ac0f09e81c6b1858c6d12a1') in 0.035328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.782325 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a8130168a33477971d377c4b35ce574') in 0.032813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.157505 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4595a4a2324f9d290747fb7649cb27fb') in 0.033258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.190020 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad43e53dedd5b45ac1e0f20de5cf396') in 0.030674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.998387 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4b82a694d6e1b3a0b3dccb8514fb7e9') in 0.027601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.623131 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '241090c6465542676f774f1431189efd') in 0.031136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.399097 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e0e1f40bfbc08fec4577d5ae257ccd') in 0.032425 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.173951 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fddfa1fa42043e6d13041df213a25832') in 0.032286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.173330 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2e1b2c90a22be8134ab245d55f50d8c') in 0.035123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.777258 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba60bb86c8f39d8453978f025738418') in 0.033087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.585538 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db286016657f37cf5b2260f584769d7') in 0.031781 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.990622 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73206336400febd0973be63b12b45802') in 0.033399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.594252 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ecad3b2dd663c09eb51575115ce7de') in 0.032588 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.373157 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d1410628d7e59ab88d478c825a4df9') in 0.030855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.187730 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfa005cc34fcc086d7173d24cab0afa9') in 0.032568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.848259 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a53df1536ae6e29719142c480ea3d0d') in 0.031737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.388838 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62857e423ae721a9a5f1493b3fc17d24') in 0.032920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.401771 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fff81134203be309c012e1f7f6a879b9') in 0.028244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.163683 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f918ea624810d8d51312ab11ceb35ae') in 0.035155 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.168961 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f76829f4bc52430b1f445e829834f7b') in 0.030780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.176011 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaac3cb16280394a41451c8693ebb17e') in 0.031430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 198.592559 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f457b2742ef4c4dd183b93335b869424') in 0.036404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.171362 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a60ef46d4b38a10d25c19442885fb47') in 0.034464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.428971 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bccb39b61d6a891a39656ab6129cf23') in 0.015824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.591675 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc70a4a0258ba6a2d4ec2c06609034e') in 0.013521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.803373 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5e10bc1e1843810878382fcf07c61ca') in 0.013671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.989040 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5555be3ffffffcf3b77fb686044140b7') in 0.014571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.200511 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e99b8791cfddbfd56d47025422e4630d') in 0.013767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.465547 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '776bb17a144d49437e6a1ec8ae1b4425') in 0.015011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.190299 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b73f2be96c4a50379560089e20b86a') in 0.013992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.615634 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd123a5e69193074b2ae456a4b24e964') in 0.015211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.197454 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae112c762b585833ed9d5fc8f5be8999') in 0.013981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.625432 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4843a334485e963aa2d5eca167abc4db') in 0.014414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.607875 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a2f3b6a545a9942ccf5f44be22f774c') in 0.013697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.405255 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed67fd7570c43566d35ba7a601135363') in 0.013851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.152392 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4699bee9be78953e8969654eb4ee53d') in 0.014349 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.390796 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85ff89e5c526eeced8b7de0b6a7f27fe') in 0.013888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.841783 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db04d9f150d16fd8fdf7659f1e660099') in 0.013773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.133528 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b184e1274a71fdf0ac69c596155bc8df') in 0.013571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.661824 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f6789bce6d20aa44512baac3abf3cb7') in 0.014509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.421021 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afb123d9d4b68b7aef3ce0a7c06695ef') in 0.015117 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.478001 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be5caf662d7bf647b226f8760e2460b') in 0.013725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.817344 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6976f1397200783280824a09f1baa04') in 0.015088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.018762 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5759683eb00766551fbcc7f3d264e29a') in 0.013765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.273417 seconds.
+  path: Assets/Prefab/Node Prefabs/Impact Sensor.prefab
+  artifactKey: Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Impact Sensor.prefab using Guid(7d3c18a94d4ee06408d5a0d954af78d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '300fbb7773afd61b32e1260bfeb84196') in 0.014272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.309899 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c851061e07d53fe04f42e7c1707a0070') in 0.040312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.462213 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4791e04cb618121842a206d744b4bc6d') in 0.013966 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.595675 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7351cc495497784de50d747b8f326f') in 0.013972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.817336 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7714f74c007b5ccdccbb5dad01dbc1f5') in 0.013671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.588372 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88fd9274882766915c8e4c4596716b66') in 0.015085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.604951 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1452618c2b68f615178b0fb240b540e5') in 0.014074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.196610 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd235736beae5fa56602df015d399d86') in 0.014108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.591044 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8639b206ce58dabaf3381226b462a15c') in 0.013914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.802005 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23f7734e74ff54755bb903a8ca25961e') in 0.014649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.695960 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ba03a29825b1ba0c9b48b9e0138b115') in 0.014300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.456485 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd57f410ecdf6e7f6e107f5cebb0a6008') in 0.015658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.631409 seconds.
+  path: Assets/Prefab/Node Prefabs/Gyroscope.prefab
+  artifactKey: Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/Gyroscope.prefab using Guid(5cf4afe3a78663d43a619786c5f87b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dd4ac182aaa777ef406bd81c7699532') in 0.014536 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 120.712644 seconds.
+  path: Assets/Prefab/Node Prefabs/AND.prefab
+  artifactKey: Guid(0814c3abaa3fb9244be9c172500a4282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/AND.prefab using Guid(0814c3abaa3fb9244be9c172500a4282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d0003be34c2367805656765e7a9465') in 0.018792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.683675 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af8fd9f6392a727d9067cdaec9ad830') in 0.017266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.361818 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e65c740299f56416d12693036bddf3') in 0.014484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.795578 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9af53af207b0870df914a9bf49c5f714') in 0.014054 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.613833 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '848d1db2e360eb2ad29be1588749b7c2') in 0.013789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.793872 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '028ddce249e728f7b8a8d8f7f3f4b471') in 0.013735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.200468 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ad62fceffb244fd2716143f03957f4') in 0.013668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.594431 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecddb6ff2e40a90c2d7cd5b5e32a1acb') in 0.014084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.647937 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e983bf4e9fa34c2cd1e073984c0b38') in 0.014100 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.788655 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcfaf26b223583e85f920669d5ce18bf') in 0.013758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.216564 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccefadd77edf63c82c4facda6f0ff06c') in 0.013843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.194064 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7a130190ff30bbec38f821e31e9554c') in 0.013633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.273851 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43da0c6b2ece44d8ed8e6ccb8149e34b') in 0.013702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.825227 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9da8301e60b5c1df556b7d636be505') in 0.013227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.481292 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb89b341d073f59dd68059bdef5c7a66') in 0.015486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.154547 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8141e6877b2a5a91fbf59b8c0e06fc00') in 0.013003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.466638 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cbd902c6ed61f7ad3451467692fe418') in 0.013751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.387463 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff38503c669863d8e6515cefa01d4002') in 0.013313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.410415 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ff5602397a0dce85c5143da7f0fac7') in 0.013279 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.202139 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be60058093fd3db42aea3fafe4bec553') in 0.014704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.789422 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51f867aef776e2fcafac8cf0fab7e06') in 0.014292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.798051 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a604bf9a6bb1a46789e8d39851ad6e3d') in 0.013341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.839221 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c26c512f04be778ccf425a6c196fa519') in 0.013356 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.602457 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6731687c2428f06d3c94ae5898b28c1') in 0.014594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.187412 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34934dc96d91caffad13ceadbf7f40f4') in 0.015488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.585010 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627ad7a68b875517f96efa279d32d67b') in 0.013121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.413488 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a97d1aac8f679db5956d45f0e04f3a8') in 0.013496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.589201 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8993be4039a857f5f697343b3e39f5') in 0.013973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.601393 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aefa276c7da4d8b4594047fd0a6f4af2') in 0.013318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.821810 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41aec47dbcb41a7997941b81a562a21e') in 0.013578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.601555 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c993765aae54451df553dff41ad2d7') in 0.013201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.405113 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ce296fca3555ceadaf957fa9651a8c9') in 0.013258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.668082 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed530c0b802086150701aab14979493a') in 0.013583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.391775 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cde07b977543b30f25e14c1d2acc3f30') in 0.015576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.396303 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c31e32e071d68c0f8ca0b6638879d34') in 0.014656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.515622 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a12a0ba3ba50e3fa80c1d874719663da') in 0.013191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.058810 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20afc7e8b4195a51999b107e2b872744') in 0.013251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.634790 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '424046c844fff75b983188d61cb4de91') in 0.013350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.613898 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f807fe658d439136e32de6b633dd3168') in 0.013512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.419964 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de14915219dc702a3a779bdd9b25d8f1') in 0.013338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.248914 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab307919481a8adbb7b432522bd888d9') in 0.013955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.439132 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f80ce4a9bba1200f8b592000603c927') in 0.013329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.434284 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a3aea5e526308cbcb1be09b9ec8acf') in 0.003978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.253487 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2b82ff189003e6c76774f1171625e34') in 0.013051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.374223 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4be2caf4341499d6efa6c286fdbcd13') in 0.015855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.241927 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b77c4d95821d1049e0309dfcbd2d6ed4') in 0.013359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.801136 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e1f126cc8a29296730802db4d6221f2') in 0.013496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.385339 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14ba135b375c5fdcd23a0818060c8f7') in 0.015639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.180722 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39d2041a9e32ce7347cc18cd10cc09c8') in 0.013227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.228934 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c871e088b90fca49cc4430ab06616e') in 0.013364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.263413 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1bf88bdf84558fb7467842ba2f15185') in 0.013515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.808546 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a888f13c6b7a9162fb45bc9a0fc38e7') in 0.013324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.211348 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df33392e5caf21b2287e34e9af635fb5') in 0.014856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.276483 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51a1497b0d1f20f79bc4ed0f46bcc39e') in 0.013923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.398251 seconds.
+  path: Assets/Prefab/Node Prefabs/AND.prefab
+  artifactKey: Guid(0814c3abaa3fb9244be9c172500a4282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/AND.prefab using Guid(0814c3abaa3fb9244be9c172500a4282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '002884abfa0d0b5e743508884d326115') in 0.015631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.456472 seconds.
+  path: Assets/Prefab/Node Prefabs/NOT.prefab
+  artifactKey: Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/NOT.prefab using Guid(b745776b3be564342a717d8eb0e041be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3971fc1eee83c74a266093cb31afc08f') in 0.013448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 442.323576 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155b1150d786794e0e0fdf72556bbc54') in 0.814389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.724227 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d17f6036bdae7eb6356402f50882981') in 0.029821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.071284 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3622a66943ce82f11f9a5b345f39d05') in 0.080215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.088799 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3bf99334b56b47729229397f61ac8e') in 0.379725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.348650 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e5b68a267140e0897978f11f1880cf') in 0.108590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.903765 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad4015655972c35721062ec520f225e2') in 0.039570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.767246 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1349b4c54c2d48743b8c789a59280ea') in 0.031520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.914686 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b3f217e3e63712e50ecd50a913daf1') in 0.037572 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.151500 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a011fd840287fdb606422938270aeae6') in 0.026727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.945699 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2de0c9e9bfdb1e287f584093365ce2') in 0.037586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.593284 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92927cf06712e111d9ccabec69c29418') in 0.034151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.427026 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '683aaf1cddbbc519980c033b140b69c4') in 0.010506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.499622 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc6fc47db8eb84a5da5f83119d4a572e') in 0.053866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.564072 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a5b9b67ca31940ead46d1c1f3a1b7c6') in 0.027343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.847127 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5c719152d638a05681841768fecb363') in 0.028562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.239480 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66ce75ee49df979054fee4669881b421') in 0.028635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.740446 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cb15f35f6de82e7db2ae6f0bb3bc869') in 0.025426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.697677 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb55f7aaf370b4fa07127b3793088486') in 0.049408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 722.856572 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8da99cc3674e53996fbcb047b99ac87') in 0.030415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.278877 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4593d2001f1b399e2cc21cbb291d9ff') in 0.025744 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.625351 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb1f0a1d73c317cc277ea47425c5bfd8') in 0.025401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.876618 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ae4c50b096eb3604cffefae90e3e335') in 0.032225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.516782 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf4c1775e7e4b6c86be81011db01aecc') in 0.024600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.642354 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a28bcafa1fb5a005c1daf71d82d1097') in 0.029264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.868623 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f5afe059c8daf05fed908116dfee0a') in 0.013362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.209403 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f37ad4af7442af7ea582071966b9deb') in 0.013621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.426137 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81bdcd5f02ea82c6254a1da3b8f311fc') in 0.013291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.091686 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6d1ac3aa19e2b54690421b46a97349d') in 0.013728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.768946 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2ed533ac0b2934061dd4bdfa0cd1ee2') in 0.013566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.386685 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcceedfcd83286b0cee032d0e91d0e08') in 0.013735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.421154 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4de6e1adc5e8c3594a484af1acfa0acb') in 0.015680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.410523 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63f15ea964d983562e8114d8db4bc8fd') in 0.013456 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.260838 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bb55eedc83e4a51aa777807d662c162') in 0.013421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.198962 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f0f4c15ad2f3b17548bae187cf9405a') in 0.013230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.993423 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043cc26a21b531bd1c8ba9fe57a64985') in 0.013168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.870807 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a1e17adfdcdb853a47db7628820073e') in 0.013520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.669104 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1349d616d6b04ced2b14259906e0fb69') in 0.013919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.057525 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d87d9eaf1481826203b1d6419d7c52') in 0.013624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.793298 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9953456b2817ada937872e97cfbd3398') in 0.013726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.594780 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6917a825a9a889804f1e9521ec9a48f') in 0.013695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.608328 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dd1cdd9bc0d55fe836d24290decabe5') in 0.013440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.809967 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a0687e6f20ee1bf7fcc8373e8f6944f') in 0.013525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.845783 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2af54fb9c316268142c43ac6970bf27') in 0.013903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.995397 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0728c38780d7b8137de393fdba82522e') in 0.014540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.395209 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11fecf93cc662f8ae959f90e24fb1621') in 0.013642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.020007 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81a13ea852b4db9ade8e4a91fc1dd64f') in 0.013488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.414906 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77377d20a60b1e84c9a7ac31a161603b') in 0.013474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.667942 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a77c1d8a7ff842db58ae0f10a6f5f4') in 0.013251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.209481 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2226fd9899b94881fa7b60405098384b') in 0.014734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.604274 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '106a5ed9c79e25f1fab17573055a5b8a') in 0.014732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.382843 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a6b85ffeca43d649ce37c334da49d7e') in 0.013504 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 669.213962 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '434457d4aaa920bda0793db6ff907d06') in 0.014249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.806668 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ab49c93ca05757c306444424945766') in 0.014448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.393336 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d83b90e3b09803d48888ddf6fe2fd7b') in 0.013721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.388471 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f36b47e21e4e5d7144144b3636f8dd5a') in 0.014027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.794149 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4764eb4e985fab5473dbad61d9202be') in 0.013665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.607294 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f46153eaed059dcd01ebda888298868') in 0.016110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.006243 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb74533992be2b7a0f2953231f2d601d') in 0.014565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.656418 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b78f0b77b980caca7fc1526ec89b8937') in 0.014021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.627005 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ca09ceecbe80e48f964100e813e358') in 0.016819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.634741 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e0db0a9e145ac5430449884a8518356') in 0.013471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.599052 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d7670c38237d8211bccaacdbacf8c3a') in 0.013827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.424111 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a22d477ec9357e4fc6466417fcd525c0') in 0.014909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.200392 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a52a6ec9eee21f26b1d70fad0917a01') in 0.013475 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.218241 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '524e26882bfb59c75651c1b7461aaac3') in 0.013756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.208036 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f2ae57aef46a2244a5782e08ecddfc3') in 0.016327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.037079 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba7dd20354df8ccc4bd22c42daaa17e') in 0.014104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.923089 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8bdb3ccb48dc8bb2a04a51e08044ad9') in 0.013737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.269870 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482af8d71554b86e2516172e7f39ab0c') in 0.013569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.400438 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '932cf3c60f773cefe33904863731d6ed') in 0.013721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.404382 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce63ec97582c5f203ab9f88ce218658c') in 0.013462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.619999 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5197f8be55ee40a8481446901b35b070') in 0.013909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.795177 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6d656c83584a36d9e78663d436f9d3a') in 0.014593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.215107 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49d0506b73c1d4d5e69100ef76f0128b') in 0.014193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.762014 seconds.
+  path: Assets/Prefab/Node Prefabs/OR.prefab
+  artifactKey: Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Node Prefabs/OR.prefab using Guid(c4c6caa1be1096a4e8bdc740c0594edd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eebb01e59b890307173c3c9800311401') in 0.014021 seconds 
