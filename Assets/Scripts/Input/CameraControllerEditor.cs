@@ -6,11 +6,10 @@ using BH;
 public class CameraControllerEditor : MonoBehaviour
 {
     [Header("General Settings")]
-    [SerializeField]
-    Camera playerCamera = default;
+    [SerializeField] Camera playerCamera = default;
+    [SerializeField] Canvas EditorUiCanvas = default;
 
-    [SerializeField]
-    int cameraFOV = 90;
+    [SerializeField] int cameraFOV = 90;
 
     public enum CameraState
     {
@@ -26,9 +25,9 @@ public class CameraControllerEditor : MonoBehaviour
     [Header("Zoom")]
     [SerializeField] float zoomSpeed = 10f;
 
-    [SerializeField] float minPosZ = -10f;
+    [SerializeField] float editorScaleMax = -10f;
 
-    [SerializeField] float maxPosZ = -50f;
+    [SerializeField] float editorScaleMin = -500f;
 
     [SerializeField]
     float scrollInput;
@@ -56,10 +55,10 @@ public class CameraControllerEditor : MonoBehaviour
     float maxAngelY;
     float minAngelY;
 
-    Vector3 initEditorPos;
-    Vector3 initEditorRot;
-
     Vector3 mouseDragStart;
+
+    Vector3 cameraStartPos;
+    Vector3 cameraStartRot;
 
     #region Misc Variables
 
@@ -81,13 +80,8 @@ public class CameraControllerEditor : MonoBehaviour
         camAngleX = Vector3.Angle(Vector3.right, transform.right);
         camAngleY = Vector3.Angle(Vector3.up, transform.up);
 
-        InitCameraPosition();
-    }
-
-    void InitCameraPosition()
-    {
-        initEditorPos = transform.position;
-        initEditorRot = transform.localEulerAngles;
+        cameraStartPos = transform.position;
+        cameraStartRot = transform.localEulerAngles;
     }
 
 
@@ -119,19 +113,39 @@ public class CameraControllerEditor : MonoBehaviour
     {
         scrollInput = Input.GetAxis("MouseScrollWheel") * zoomSpeed;
 
-        if (playerCamera.transform.position.z >= maxPosZ & playerCamera.transform.position.z <= minPosZ)
+        //if (scrollInput > 0f || scrollInput < 0f)
+        //{
+        //    Debug.Log("Scroll input = " + scrollInput);
+
+        //    // Check to see if X is Greater, equal or less to the min or max.
+        //    if
+        //    (
+        //        EditorUiCanvas.transform.localScale.x >= editorScaleMax && EditorUiCanvas.transform.localScale.x <= editorScaleMax ||
+        //        EditorUiCanvas.transform.localScale.x >= editorScaleMin && EditorUiCanvas.transform.localScale.x <= editorScaleMin
+        //    )
+        //    {
+        //        Debug.Log("Scroll input detected");
+
+        //        EditorUiCanvas.transform.localScale = new Vector3(scrollInput * 0.1f, scrollInput * 0.1f, 1f);
+        //    }
+        //}
+
+
+        if (scrollInput == 1f)
         {
-            playerCamera.transform.Translate(new Vector3(0, 0, scrollInput));
+            if (EditorUiCanvas.transform.localScale.x <= editorScaleMax && EditorUiCanvas.transform.localScale.y <= editorScaleMax)
+            {
+                Debug.Log("Scroll input detected");
+                EditorUiCanvas.transform.localScale = new Vector3(EditorUiCanvas.transform.localScale.x - 0.01f, EditorUiCanvas.transform.localScale.y - 0.01f, 1);
+            }
         }
-        else if (playerCamera.transform.position.z < maxPosZ)
+        if (scrollInput == -1f)
         {
-            playerCamera.transform.position =
-                new Vector3(transform.position.x, transform.position.y, maxPosZ + 2f);
-        }
-        else if (playerCamera.transform.position.z > minPosZ)
-        {
-            playerCamera.transform.position =
-                new Vector3(transform.position.x, transform.position.y, minPosZ - 2f);
+            if (EditorUiCanvas.transform.localScale.x >= editorScaleMin && EditorUiCanvas.transform.localScale.y >= editorScaleMin)
+            {
+                Debug.Log("Scroll input detected");
+                EditorUiCanvas.transform.localScale = new Vector3(EditorUiCanvas.transform.localScale.x + 0.01f, EditorUiCanvas.transform.localScale.y + 0.01f, 1);
+            }
         }
     }
 
@@ -139,8 +153,6 @@ public class CameraControllerEditor : MonoBehaviour
     {
         if (cameraState == CameraState.Editor)
         {
-            if (!Camera.main.orthographic) Camera.main.orthographic = true;
-
             if (Input.GetMouseButtonDown(2))
             {
                 mouseDragStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
@@ -159,8 +171,6 @@ public class CameraControllerEditor : MonoBehaviour
 
     void FreeCameraMovement()
     {
-        if(Camera.main.orthographic) Camera.main.orthographic = false;
-
         if (Input.GetMouseButtonDown(1))
         {
             Cursor.visible = false;
@@ -256,11 +266,21 @@ public class CameraControllerEditor : MonoBehaviour
     {
         if (m_cameraState == CameraState.Stop)
         {
-            transform.position = initEditorPos;
-            transform.localEulerAngles = initEditorRot;
+            transform.position = cameraStartPos;
+            transform.localEulerAngles = cameraStartRot;
             cameraState = CameraState.Editor;
         }
+        else if (m_cameraState == CameraState.Play)
+        {
+
+        }
+        else if (m_cameraState == CameraState.Editor)
+        {
+
+        }
     }
+
+        
 
     #region Local Methods
 

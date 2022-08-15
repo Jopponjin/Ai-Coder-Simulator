@@ -32,6 +32,7 @@ namespace BH
                 {
                      GameObject spawnedNode = Instantiate(allNodesInEditor[i], nodeSpawnParent);
                     spawnedNode.transform.position = new Vector3(nodeSpawnParent.position.x, nodeSpawnParent.position.y, nodeSpawnParent.position.z + -0.1f);
+
                     //Debug.Log("[EVENTSYS]: Created " + allNodesInEditor[i].gameObject.name +" node!");
                 }
             }

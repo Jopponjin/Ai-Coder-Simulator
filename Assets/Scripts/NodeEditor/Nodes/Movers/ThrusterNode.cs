@@ -40,7 +40,8 @@ namespace BH
 
         private void Awake()
         {
-            shipRb = shipData.ShipGameObject.GetComponent<Rigidbody>();
+            
+            shipData.ShipGameObject.TryGetComponent(out shipRb);
         }
 
         public override void ProcessOutput(GameObject m_shipRefrance)
