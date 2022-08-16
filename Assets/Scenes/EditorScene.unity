@@ -1491,11 +1491,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
-  EditorUiCanvas: {fileID: 522593449}
+  editorUiCanvas: {fileID: 522593449}
   cameraFOV: 80
   cameraState: 0
-  zoomSpeed: 10
-  editorScaleMax: 2
+  zoomScalingFactor: 0.01
+  editorScaleMax: 1.5
   editorScaleMin: 0.5
   scrollInput: 0
   mousedragSens: 0

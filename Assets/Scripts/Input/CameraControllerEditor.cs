@@ -7,7 +7,7 @@ public class CameraControllerEditor : MonoBehaviour
 {
     [Header("General Settings")]
     [SerializeField] Camera playerCamera = default;
-    [SerializeField] Canvas EditorUiCanvas = default;
+    [SerializeField] GameObject editorUiCanvas = default;
 
     [SerializeField] int cameraFOV = 90;
 
@@ -23,17 +23,17 @@ public class CameraControllerEditor : MonoBehaviour
 
     [Space]
     [Header("Zoom")]
-    [SerializeField] float zoomSpeed = 10f;
+    [SerializeField] float zoomScalingFactor = 0.01f;
 
-    [SerializeField] float editorScaleMax = -10f;
+    [SerializeField] float editorScaleMax;
 
-    [SerializeField] float editorScaleMin = -500f;
+    [SerializeField] float editorScaleMin;
 
     [SerializeField]
     float scrollInput;
 
     [Header("Mouse Drag")]
-    [SerializeField] float mousedragSens = 2;
+    [SerializeField] float mouseDragSens = 0.5f;
 
     [SerializeField] Vector3 mouseOrigin;
 
@@ -57,8 +57,13 @@ public class CameraControllerEditor : MonoBehaviour
 
     Vector3 mouseDragStart;
 
+    Vector3 lastPanPosition;
+    Vector3 newPanPosition;
+
     Vector3 cameraStartPos;
     Vector3 cameraStartRot;
+
+    Vector3 editorBounds;
 
     #region Misc Variables
 
@@ -89,12 +94,16 @@ public class CameraControllerEditor : MonoBehaviour
     {
         if (cameraState == CameraState.Editor)
         {
+            Camera.main.orthographic = true;
+
             MouseCameraDrag();
             ScrollZoom();
         }
 
         if (cameraState == CameraState.Play)
         {
+            Camera.main.orthographic = false;
+
             FreeCameraMovement();
         }
 
@@ -109,45 +118,56 @@ public class CameraControllerEditor : MonoBehaviour
         }
     }
 
+
     void ScrollZoom()
     {
-        scrollInput = Input.GetAxis("MouseScrollWheel") * zoomSpeed;
+        scrollInput = Input.GetAxis("MouseScrollWheel") * zoomScalingFactor;
 
-        //if (scrollInput > 0f || scrollInput < 0f)
-        //{
-        //    Debug.Log("Scroll input = " + scrollInput);
-
-        //    // Check to see if X is Greater, equal or less to the min or max.
-        //    if
-        //    (
-        //        EditorUiCanvas.transform.localScale.x >= editorScaleMax && EditorUiCanvas.transform.localScale.x <= editorScaleMax ||
-        //        EditorUiCanvas.transform.localScale.x >= editorScaleMin && EditorUiCanvas.transform.localScale.x <= editorScaleMin
-        //    )
-        //    {
-        //        Debug.Log("Scroll input detected");
-
-        //        EditorUiCanvas.transform.localScale = new Vector3(scrollInput * 0.1f, scrollInput * 0.1f, 1f);
-        //    }
-        //}
-
-
-        if (scrollInput == 1f)
+        if (scrollInput != 0f)
         {
-            if (EditorUiCanvas.transform.localScale.x <= editorScaleMax && EditorUiCanvas.transform.localScale.y <= editorScaleMax)
+            Debug.LogWarning("scrollInput is NOT 0");
+
+
+            // Check if scaling is outside the bounderies for X and Y
+            if (editorUiCanvas.transform.localScale.x >= editorScaleMax)
             {
-                Debug.Log("Scroll input detected");
-                EditorUiCanvas.transform.localScale = new Vector3(EditorUiCanvas.transform.localScale.x - 0.01f, EditorUiCanvas.transform.localScale.y - 0.01f, 1);
+                Debug.LogWarning("editorUiCanvas scale X is more then max!");
+
+                editorUiCanvas.transform.localScale = new Vector3(editorScaleMax, editorUiCanvas.transform.localScale.y, editorUiCanvas.transform.localScale.z);
             }
-        }
-        if (scrollInput == -1f)
-        {
-            if (EditorUiCanvas.transform.localScale.x >= editorScaleMin && EditorUiCanvas.transform.localScale.y >= editorScaleMin)
+            else if (editorUiCanvas.transform.localScale.x <= editorScaleMin)
             {
-                Debug.Log("Scroll input detected");
-                EditorUiCanvas.transform.localScale = new Vector3(EditorUiCanvas.transform.localScale.x + 0.01f, EditorUiCanvas.transform.localScale.y + 0.01f, 1);
+                Debug.LogWarning("editorUiCanvas scale X is less the minimum!");
+
+                editorUiCanvas.transform.localScale = new Vector3(editorScaleMin, editorUiCanvas.transform.localScale.y, editorUiCanvas.transform.localScale.z);
+            }
+
+            if (editorUiCanvas.transform.localScale.y >= editorScaleMax)
+            {
+                Debug.LogWarning("editorUiCanvas scale Y is more then max!");
+
+                editorUiCanvas.transform.localScale = new Vector3(editorUiCanvas.transform.localScale.x, editorScaleMax, editorUiCanvas.transform.localScale.z);
+            }
+            else if (editorUiCanvas.transform.localScale.y <= editorScaleMin)
+            {
+                Debug.LogWarning("editorUiCanvas scale Y is less the minimum!");
+
+                editorUiCanvas.transform.localScale = new Vector3(editorUiCanvas.transform.localScale.x, editorScaleMin, editorUiCanvas.transform.localScale.z);
+            }
+
+
+            if (scrollInput > 0f)
+            {
+                Debug.Log("scrollinput 1");
+                editorUiCanvas.transform.localScale = new Vector3(editorUiCanvas.transform.localScale.x + 0.01f, editorUiCanvas.transform.localScale.y + 0.01f, editorUiCanvas.transform.localScale.z);
+            }
+            else if (scrollInput < 0)
+            {
+                editorUiCanvas.transform.localScale = new Vector3(editorUiCanvas.transform.localScale.x - 0.01f, editorUiCanvas.transform.localScale.y - 0.01f, editorUiCanvas.transform.localScale.z);
             }
         }
     }
+
 
     void MouseCameraDrag()
     {
@@ -155,18 +175,26 @@ public class CameraControllerEditor : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(2))
             {
-                mouseDragStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
-                mouseDragStart = Camera.main.ScreenToWorldPoint(mouseDragStart);
-                mouseDragStart.z = transform.position.z;
+                lastPanPosition = Input.mousePosition;
             }
-            if (Input.GetMouseButton(2))
+            else if (Input.GetMouseButton(2))
             {
-                Vector3 mouseDragDir = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
-                mouseDragDir = Camera.main.ScreenToWorldPoint(mouseDragDir);
-                mouseDragDir.z = transform.position.z;
-                transform.position = transform.position - (mouseDragDir - mouseDragStart);
+                newPanPosition = Input.mousePosition;
+
+                Vector3 offset = Camera.main.ScreenToViewportPoint(lastPanPosition - newPanPosition);
+                Vector3 move = new Vector3(offset.x * (mouseDragSens * 10f), offset.y * (mouseDragSens * 10f), 0f);
+
+                editorUiCanvas.transform.Translate(-move, Space.World);
+
+                lastPanPosition = newPanPosition;
             }
         }
+    }
+
+
+    void PanCanvas(Vector3 m_newPanPosition)
+    {
+        
     }
 
     void FreeCameraMovement()
@@ -290,6 +318,13 @@ public class CameraControllerEditor : MonoBehaviour
         if (angle > 360) angle -= 360;
 
         return Mathf.Clamp(angle, min, max);
+    }
+
+
+    void DebugLogs()
+    {
+        Debug.LogWarning("Canvas scale is x: " + editorUiCanvas.transform.localScale.x + ", y: " + editorUiCanvas.transform.localScale.y);
+        Debug.LogWarning("Editor canvas min max are: " + editorScaleMax + " , " + editorScaleMin);
     }
     #endregion
 

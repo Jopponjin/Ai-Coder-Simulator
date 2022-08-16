@@ -17,7 +17,7 @@ namespace BH
         public bool wireConnected;
         public Pin startPin;
         public Pin endPin;
-        float depth;
+        float depth = 0f;
         [SerializeField]
         float colAngle;
 
