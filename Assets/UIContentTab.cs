@@ -22,14 +22,13 @@ namespace BH
         {
             if (nodeEditor.allNodesInEditor != null)
             {
-                Debug.Log("[UIContentTab]: Adding node to Content tab.");
                 for (int i = 0; i < nodeEditor.allNodesInEditor.Count; i++)
                 {
                     Button m_tempButton = Instantiate(nodeButtonPrefab, parent : transform);
 
                     if (m_tempButton != null)
                     {
-                        // Set the mock Ui buttons t4ext and name to what is in the list index.
+                        // Set the mock Ui buttons text and name to what is in the list index.
                         m_tempButton.name = nodeEditor.allNodesInEditor[i].GetComponent<BaseNode>().nodeName;
                         m_tempButton.GetComponent<OnCreateNode>().prefabName = nodeEditor.allNodesInEditor[i].GetComponent<BaseNode>().nodeName;
                         m_tempButton.GetComponentInChildren<Text>().text = nodeEditor.allNodesInEditor[i].GetComponent<BaseNode>().nodeName;

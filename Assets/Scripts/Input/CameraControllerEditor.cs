@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using BH;
 
@@ -25,9 +23,9 @@ public class CameraControllerEditor : MonoBehaviour
     [Header("Zoom")]
     [SerializeField] float zoomScalingFactor = 0.01f;
 
-    [SerializeField] float editorScaleMax;
+    [SerializeField] float editorScaleMax = 1.5f;
 
-    [SerializeField] float editorScaleMin;
+    [SerializeField] float editorScaleMin = 0.5f;
 
     [SerializeField]
     float scrollInput;
@@ -45,17 +43,15 @@ public class CameraControllerEditor : MonoBehaviour
 
     [SerializeField] float shiftAdd = 250.0f; //multiplied by how long shift is held.  Basically running
 
-    [SerializeField] float maxShift = 1000.0f; //Maximum speed when holdin gshift
+    [SerializeField] float maxShift = 1000.0f; 
 
-    [SerializeField] int cameraSens = 5; //How sensitive it with mouse
+    [SerializeField] int cameraSens = 5; 
 
     float camAngleX;
     float camAngleY;
 
     float maxAngelY;
     float minAngelY;
-
-    Vector3 mouseDragStart;
 
     Vector3 lastPanPosition;
     Vector3 newPanPosition;
@@ -119,6 +115,8 @@ public class CameraControllerEditor : MonoBehaviour
     }
 
 
+    #region Editor Navigation
+
     void ScrollZoom()
     {
         scrollInput = Input.GetAxis("MouseScrollWheel") * zoomScalingFactor;
@@ -131,34 +129,25 @@ public class CameraControllerEditor : MonoBehaviour
             // Check if scaling is outside the bounderies for X and Y
             if (editorUiCanvas.transform.localScale.x >= editorScaleMax)
             {
-                Debug.LogWarning("editorUiCanvas scale X is more then max!");
-
                 editorUiCanvas.transform.localScale = new Vector3(editorScaleMax, editorUiCanvas.transform.localScale.y, editorUiCanvas.transform.localScale.z);
             }
             else if (editorUiCanvas.transform.localScale.x <= editorScaleMin)
             {
-                Debug.LogWarning("editorUiCanvas scale X is less the minimum!");
-
                 editorUiCanvas.transform.localScale = new Vector3(editorScaleMin, editorUiCanvas.transform.localScale.y, editorUiCanvas.transform.localScale.z);
             }
 
             if (editorUiCanvas.transform.localScale.y >= editorScaleMax)
             {
-                Debug.LogWarning("editorUiCanvas scale Y is more then max!");
-
                 editorUiCanvas.transform.localScale = new Vector3(editorUiCanvas.transform.localScale.x, editorScaleMax, editorUiCanvas.transform.localScale.z);
             }
             else if (editorUiCanvas.transform.localScale.y <= editorScaleMin)
             {
-                Debug.LogWarning("editorUiCanvas scale Y is less the minimum!");
-
                 editorUiCanvas.transform.localScale = new Vector3(editorUiCanvas.transform.localScale.x, editorScaleMin, editorUiCanvas.transform.localScale.z);
             }
 
 
             if (scrollInput > 0f)
             {
-                Debug.Log("scrollinput 1");
                 editorUiCanvas.transform.localScale = new Vector3(editorUiCanvas.transform.localScale.x + 0.01f, editorUiCanvas.transform.localScale.y + 0.01f, editorUiCanvas.transform.localScale.z);
             }
             else if (scrollInput < 0)
@@ -191,11 +180,6 @@ public class CameraControllerEditor : MonoBehaviour
         }
     }
 
-
-    void PanCanvas(Vector3 m_newPanPosition)
-    {
-        
-    }
 
     void FreeCameraMovement()
     {
@@ -243,11 +227,13 @@ public class CameraControllerEditor : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            cameraHorizontalDir = cameraHorizontalDir * shiftAdd;
+
             cameraHorizontalDir.x = Mathf.Clamp(cameraHorizontalDir.x, -maxShift, maxShift);
             cameraVertiaclDir.y = Mathf.Clamp(cameraHorizontalDir.y, -maxShift, maxShift);
             cameraHorizontalDir.z = Mathf.Clamp(cameraHorizontalDir.z, -maxShift, maxShift);
         }
-        
+
         if (Input.GetKey(KeyCode.Space))
         {
             cameraVertiaclDir += new Vector3(0, 1, 0);
@@ -257,38 +243,45 @@ public class CameraControllerEditor : MonoBehaviour
             cameraVertiaclDir += new Vector3(0, -1, 0);
         }
 
-        transform.Translate(cameraHorizontalDir);
+        transform.Translate(cameraHorizontalDir, Space.World);
         transform.Translate(cameraVertiaclDir, Space.World);
     }
 
-    public void ApplyCameraSettings()
+    #endregion
+
+
+    #region Local Methods
+
+    void ApplyCameraSettings()
     {
         playerCamera.fieldOfView = cameraFOV;
     }
-    
-    public void SetCameraState(int m_stateNumber)
+
+
+    void SetCameraState(int m_stateNumber)
     {
         if (m_stateNumber == 1)
-        { 
+        {
             cameraState = CameraState.Editor;
             ApplyStateSettings(CameraState.Editor);
         }
-        if (m_stateNumber == 2) 
-        { 
+        if (m_stateNumber == 2)
+        {
             cameraState = CameraState.Debug;
             ApplyStateSettings(CameraState.Debug);
         }
-        if (m_stateNumber == 3) 
-        { 
+        if (m_stateNumber == 3)
+        {
             cameraState = CameraState.Stop;
             ApplyStateSettings(CameraState.Stop);
         }
-        if (m_stateNumber == 4) 
-        { 
+        if (m_stateNumber == 4)
+        {
             cameraState = CameraState.Play;
             ApplyStateSettings(CameraState.Play);
         }
     }
+
 
     void ApplyStateSettings(CameraState m_cameraState)
     {
@@ -307,10 +300,6 @@ public class CameraControllerEditor : MonoBehaviour
 
         }
     }
-
-        
-
-    #region Local Methods
 
     private static float ClampAngle(float angle, float min, float max)
     {

@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 
 namespace BH
 {
-    public class EditorInteraction : MonoBehaviour
+    public class EditorInteraction : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
     {
         [Header("Data")]
         [SerializeField]
@@ -68,6 +68,12 @@ namespace BH
         [SerializeField] EventSystem eventSystem;
         [SerializeField] RectTransform canvasRect;
 
+
+        public Transform parentToReturnTo = default;
+        public Transform placeHolderParent = default;
+
+        Vector2 nodeToMouseOffset;
+
         private void Awake()
         {
             editorInput = GetComponent<EditorInput>();
@@ -87,16 +93,21 @@ namespace BH
         
         private void MouseInteractionLogic()
         {
-            if (RaycastUtilities.PointerIsOverUI(Input.mousePosition))
+
+            RaycastHit hitFocus;
+            if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hitFocus))
             {
-                Debug.Log("EditorInteraction.cs: Hitting an object");
-                GameObject tempGameobject = RaycastUtilities.UIRaycast(RaycastUtilities.ScreenPosToPointerData(Input.mousePosition));
+
+                Debug.Log("Hit something");
+
                 // Apply focused object
-                if (tempGameobject.layer == 10)
+                if (hitFocus.transform.gameObject.CompareTag("Node"))
                 {
-                    currentOnFocusObject = tempGameobject;
+                    currentOnFocusObject = hitFocus.transform.gameObject;
                     Debug.Log("EditorInteraction.cs: Hitting " + currentOnFocusObject);
                 }
+
+
             }
             else
             {
@@ -191,6 +202,26 @@ namespace BH
                 clickInteracting = false;
             }
         }
+
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            holdInteracting = true;
+            nodeToMouseOffset = eventData.position - new Vector2(transform.position.x, transform.position.y);
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            nodeToMouseOffset = eventData.position - new Vector2(transform.position.x, transform.position.y);
+        }
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            holdInteracting = false;
+        }
+
+       
+
 
         void CheckInteraction()
         {
@@ -308,8 +339,6 @@ namespace BH
         {
 
         }
-
-
     }
 }
 

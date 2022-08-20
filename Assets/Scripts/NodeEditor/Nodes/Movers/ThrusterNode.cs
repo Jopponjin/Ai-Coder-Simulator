@@ -40,7 +40,6 @@ namespace BH
 
         private void Awake()
         {
-            
             shipData.ShipGameObject.TryGetComponent(out shipRb);
         }
 

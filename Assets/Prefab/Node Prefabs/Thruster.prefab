@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 4767551933748098854}
   - component: {fileID: 2413352990193111675}
   - component: {fileID: 2146518788950590191}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Top Bar Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1219,7 @@ GameObject:
   - component: {fileID: 2022138190661533458}
   - component: {fileID: 4538101430465568581}
   - component: {fileID: 6415884328300698439}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Background Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

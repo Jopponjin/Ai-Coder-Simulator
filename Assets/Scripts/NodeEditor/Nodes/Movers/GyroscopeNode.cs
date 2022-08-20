@@ -17,7 +17,7 @@ public class GyroscopeNode : BaseNode
     private void Awake()
     {
         gyroOriginRot = transform.rotation;
-        shipData.ShipGameObject.GetComponent<Rigidbody>();
+        shipData.ShipGameObject.TryGetComponent(out shipRb);
     }
 
     public override void ProcessOutput(GameObject m_shipRefrance)

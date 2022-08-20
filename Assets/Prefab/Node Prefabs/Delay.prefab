@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 6103732117705996457}
   - component: {fileID: 5509122868646898588}
   - component: {fileID: 858824498182725360}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Top Bar Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 1395184408449780998}
   - component: {fileID: 1842794001255580985}
   - component: {fileID: 7593442765435469032}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Background Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
